@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slide-new-arrival {
+            width: 90%;
+            margin: auto;
+        }
+        #slide-above {
+            text-align: center;
+            font-size: 28px;
+            color: #12284c;
+        }
+        .slide-parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        .slide-child {
+            width: 25%;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            display: none;
+        }
+        .slide-child img {
+            height: 200px;
+            width: 75%;
+        }
+        .slide-child img ~ p {
+            font-size: 16px;
+            color: #8b8c8b;
+        }
+        .slide-child img + p {
+            color: #12284c;
+        }
+        #slide-leftarrow button, #slide-rightarrow button {
+            background: transparent;
+            border: none;
+            height: 100px;
+            font-size: 50px;
+            display: inline-block;
+            color: gray;
+        }
+        #inbetween {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
+            margin: 50px auto;
+        }
+        #inbetween div img {
+            width: 100%;
+            height: 500px;
+        }
+        #inbetween div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        #inbetween div p:nth-child(1) {
+            color: #12284c;
+            font-size: 28px;
+            width: 80%;
+        }
+        #inbetween div p:nth-child(2) {
+            color: #8b8c8b;
+            font-size: 20px;
+            width: 80%;
+        }
+        #before-footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 90%;
+            margin: 50px auto 50px;
+            grid-gap: 25px;
+            text-align: center;
+        }
+        #before-footer div img {
+            width: 100%;
+            height: 400px;
+        }
+        #before-footer div img + p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #before-footer div p:nth-child(3) {
+            font-size: 16px;
+            color: #7d7d7d;
+            width: 90%;
+            margin: 0 auto;
+        }
+        #foot {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            width: 90%;
+            margin: 25px auto;
+            grid-gap: 50px;
+            color: #7d7d7d;
+        }
+        #foot div button {
+            border: none;
+            background: transparent;
+        }
+        #foot div input {
+            background: transparent;
+            border: none;
+        }
+        #foot div:nth-child(n+1) p:nth-child(1) {
+            font-size: 16px;
+        }
+        #foot div:nth-child(n+1) p:nth-child(1) ~ p {
+            font-size: 15px;
+        }
+        #foot-first {
+            font-size: 15px;
+        }
+        #foot-first p:nth-child(1) {
+            font-size: 16px;
+            color: #12284c;
+        }
+        #foot-first div:nth-child(4) {
+            font-size: 14px;
+            margin: 10px 0px;
+            width: 80%;
+        }
+        .copyright {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body onload="slideShow()">
+    <div id="slide-new-arrival">
+        <div id="slide-above"><p>NEW ARRIVALS</p></div>
+        <div class="slide-parent">
+            <div id="slide-leftarrow" onclick="slideMoveLeft()">
+                <button>&lt;</button>
+            </div>
+            <div class="slide-child" id="sc1">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_235x235_crop_center.jpg?v=1629489864"
+                    alt="">
+                <p>KIEHL'S SINCE 1851</p>
+                <p>Anti-Aging Rentinol Serum</p>
+                <p>$60</p>
+            </div>
+            <div class="slide-child" id="sc2">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-194251026169-1_235x235_crop_center.jpg?v=1628195108"
+                    alt="">
+                <p>NARS</p>
+                <p>Climax Eyeshadow Palette</p>
+                <p>$49</p>
+            </div>
+            <div class="slide-child" id="sc3">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060506361505-1_235x235_crop_center.jpg?v=1629380313"
+                    alt="">
+                <p>THE NUE CO</p>
+                <p>Destress 360</p>
+                <p>$55</p>
+            </div>
+            <div class="slide-child" id="sc4">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-860006685539-1_235x235_crop_center.jpg?v=1629234653"
+                    alt="">
+                <p>JENNY PATINKIN</p>
+                <p>Cryo Glow Globes</p>
+                <p>$70</p>
+            </div>
+            <div class="slide-child" id="sc5">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-air-850004373019-1_235x235_crop_center.jpg?v=1628195030"
+                    alt="">
+                <p>HOURGLASS</p>
+                <p>Curator Eyeshadow</p>
+                <p>$29</p>
+            </div>
+            <div class="slide-child" id="sc6">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-85oz-685428028913-1_235x235_crop_center.jpg?v=1627423091"
+                    alt="">
+                <p>BUMBLE AND BUMBLE</p>
+                <p>Blonde Shampoo</p>
+                <p>$31</p>
+            </div>
+            <div class="slide-child" id="sc7">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-67oz-685428028944-1_235x235_crop_center.jpg?v=1627422903"
+                    alt="">
+                <p>BUMBLE AND BUMBLE</p>
+                <p>Blonde Conditioner</p>
+                <p>$34</p>
+            </div>
+            <div class="slide-child" id="sc8">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bodyheat-888066094887-1_235x235_crop_center.jpg?v=1629134891"
+                    alt="">
+                <p>TOM FORD</p>
+                <p>Eye Color Quad</p>
+                <p>$89</p>
+            </div>
+            <div id="slide-rightarrow" onclick="slideMoveRight()">
+                <button>&gt;</button>
+            </div>
+        </div>    
+    </div>
+
+    <div id="inbetween">
+        <div><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/vitamin-c-tabbed_content_1000x.jpg?v=1613158144" alt=""></div>
+        <div>
+            <p>Skincare Superstar: Vitamin C</p>
+            <p>This antioxidant powerhouse can utterly transform skin, making it brighter, smoother and more radiant. Is it part of your daily routine?</p>
+        </div>
+    </div>
+
+    <div id="slide-new-arrival">
+        <div id="slide-above"><p>BEST SELLERS</p></div>
+        <div class="slide-parent">
+            <div id="slide-leftarrow" onclick="slideMoveLeft1()">
+                <button>&lt;</button>
+            </div>
+            <div class="slide-child" id="scc1">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bliss-656509018215-1.jpg?v=1628929779"
+                    alt="">
+                <p>CHANTECAILLE</p>
+                <p>Skin Moisturizer</p>
+                <p>$79</p>
+            </div>
+            <div class="slide-child" id="scc2">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-635494263008-1.jpg"
+                    alt="">
+                <p>SKINCEUTICALS</p>
+                <p>C E Ferulic</p>
+                <p>$166</p>
+            </div>
+            <div class="slide-child" id="scc3">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-30treatments-817237011774-1.jpg?v=1628281757"
+                    alt="">
+                <p>M-61</p>
+                <p>PowerGlow Peel</p>
+                <p>$30</p>
+            </div>
+            <div class="slide-child" id="scc4">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-50ml-656509701704-1.jpg?v=1620672835"
+                    alt="">
+                <p>CHANTECAILLE</p>
+                <p>Bio Lifting Mask</p>
+                <p>$50</p>
+            </div>
+            <div class="slide-child" id="scc5">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bamboo-656509012022-1.jpg?v=1620672681"
+                    alt="">
+                <p>CHANTECAILLE</p>
+                <p>Compact Makeup</p>
+                <p>$74</p>
+            </div>
+            <div class="slide-child" id="scc6">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060534510043-1.jpg"
+                    alt="">
+                <p>THE LIGHT SALON</p>
+                <p>Boost LED Mask</p>
+                <p>$495</p>
+            </div>
+            <div class="slide-child" id="scc7">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-20treatments-817237011415-1.jpg?v=1628281569"
+                    alt="">
+                <p>M-61</p>
+                <p>PowerGlow Peel</p>
+                <p>$36</p>
+            </div>
+            <div class="slide-child" id="scc8">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-635494117004-1.jpg"
+                    alt="">
+                <p>SKINCEUTICALS</p>
+                <p>Hydrating B5 Gel</p>
+                <p>$35</p>
+            </div>
+            <div id="slide-rightarrow" onclick="slideMoveRight1()">
+                <button>&gt;</button>
+            </div>
+        </div>    
+    </div>
+
+    <div id="before-footer">
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/samples-content_block_705x705.jpg?v=1604551537" alt="">
+            <p>FREE GIFTS WITH PURCHASE</p>
+            <p>Stock up on all your favourite brands, then try something new on us</p>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/curbside-hp-content_block_705x705.jpg?v=1596135342" alt="">
+            <p>SHOP SAFELY IN STORE</p>
+            <p>In-store shopping, curbside pickup or complimentary ship to home</p>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/spa_menu_photo_705x705.jpg?v=1628018315" alt="">
+            <p>BLUEMERCURY SPA</p>
+            <p>Our luxurious spa services are customizable to your individual needs</p>
+        </div>
+    </div>
+
+    
+    <hr/>
+
+    <div id="foot">
+        <div id="foot-first">
+            <p>Get Expert Beauty Insight & Offers</p>
+            <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
+            <button onclick="mailSent()">&rarr;</button>
+            <div>To learn more about how we use your information and your rights, see Privacy Note</div>
+            <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
+        </div>
+        <div>
+            <p>BLUEMERCURY</p>
+            <p>Our Company</p>
+            <p>Store Locator</p>
+            <p>Spa Menu</p>
+            <p>Press</p>
+            <p>Careers</p>
+        </div>
+        <div>
+            <p>MY ACCOUNT</p>
+            <p>My Account</p>
+            <p>Blue Rewards</p>
+        </div>
+        <div>
+            <p>CUSTOMER SERVICE</p>
+            <p>Contact Us</p>
+            <p>Help & FAQ</p>
+            <p>Offers</p>
+            <p>Klarna</p>
+        </div>
+        <div>
+            <p>RESOURCES</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Accessibility</p>
+            <p>COVID-19 Updates</p>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+<script>
+
+    let bluemercuryData = [
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-635494117004-1.jpg",
+            brand: "SKINCEUTICALS",
+            name: "Hydrating B5 Gel",
+            price: 35,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-20treatments-817237011415-1.jpg?v=1628281569",
+            brand: "M-61",
+            name: "PowerGlow Peel",
+            price: 36,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060534510043-1.jpg",
+            brand: "THE LIGHT SALON",
+            name: "Boost LED Mask",
+            price: 495,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bamboo-656509012022-1.jpg?v=1620672681",
+            brand: "CHANTECAILLE",
+            name: "Compact Makeup",
+            price: 74,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-50ml-656509701704-1.jpg?v=1620672835",
+            brand: "CHANTECAILLE",
+            name: "Bio Lifting Mask",
+            price: 50,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-30treatments-817237011774-1.jpg?v=1628281757",
+            brand: "M-61",
+            name: "PowerGlow Peel",
+            price: 30,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-635494263008-1.jpg",
+            brand: "SKINCEUTICALS",
+            name: "C E Ferulic",
+            price: 166,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bliss-656509018215-1.jpg?v=1628929779",
+            brand: "CHANTECAILLE",
+            name: "Skin Moisturizer",
+            price: 79,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bodyheat-888066094887-1_235x235_crop_center.jpg?v=1629134891",
+            brand: "TOM FORD",
+            name: "Eye Color Quad",
+            price: 89,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-67oz-685428028944-1_235x235_crop_center.jpg?v=1627422903",
+            brand: "BUMBLE AND BUMBLE",
+            name: "Blonde Conditioner",
+            price: 34,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-85oz-685428028913-1_235x235_crop_center.jpg?v=1627423091",
+            brand: "BUMBLE AND BUMBLE",
+            name: "Blonde Shampoo",
+            price: 31,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-85oz-685428028913-1_235x235_crop_center.jpg?v=1627423091",
+            brand: "HOURGLASS",
+            name: "Curator Eyeshadow",
+            price: 29,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-860006685539-1_235x235_crop_center.jpg?v=1629234653",
+            brand: "JENNY PATINKIN",
+            name: "Cryo Glow Globes",
+            price: 70,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060506361505-1_235x235_crop_center.jpg?v=1629380313",
+            brand: "THE NUE CO",
+            name: "Destress 360",
+            price: 55,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-194251026169-1_235x235_crop_center.jpg?v=1628195108",
+            brand: "NARS",
+            name: "Climax Eyeshadow Palette",
+            price: 49,
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_235x235_crop_center.jpg?v=1629489864",
+            brand: "KIEHL'S SINCE 1851",
+            name: "Anti-Aging Rentinol Serum",
+            price: 60,
+        },
+    ]
+
+    var slideLeft = 1;
+    var slideRight = 4;
+    var slideLeft1 = 1;
+    var slideRight1 = 4;
+
+    function slideShow() {
+        for (let i = slideLeft; i <= slideRight; i++) {
+            document.getElementById("sc" + i).style.display = "inline-block";
+        }
+        for (let i = slideLeft; i <= slideRight; i++) {
+            document.getElementById("scc" + i).style.display = "inline-block";
+        }  
+    }
+
+    function slideMoveRight() {
+        if (slideRight <= 7) {
+            document.getElementById("sc" + slideLeft).style.display = "none";
+            slideLeft += 1;
+            slideRight += 1;
+
+            for (let i = slideLeft; i <= slideRight; i++) {
+            document.getElementById("sc" + i).style.display = "inline-block";
+            }
+        } else {
+            return;
+        }
+    }
+
+    function slideMoveRight1() {
+        if (slideRight1 <= 7) {
+            document.getElementById("scc" + slideLeft1).style.display = "none";
+            slideLeft1 += 1;
+            slideRight1 += 1;
+
+            for (let i = slideLeft1; i <= slideRight1; i++) {
+            document.getElementById("scc" + i).style.display = "inline-block";
+            }
+        } else {
+            return;
+        }
+    }
+
+    function slideMoveLeft() {
+        if (slideLeft >= 2) {
+            document.getElementById("sc" + slideRight).style.display = "none";
+            slideLeft -= 1;
+            slideRight -= 1;
+
+            for (let i = slideLeft; i <= slideRight; i++) {
+            document.getElementById("sc" + i).style.display = "inline-block";
+            }
+        } else {
+            return;
+        } 
+    }
+
+    function slideMoveLeft1() {
+        if (slideLeft1 >= 2) {
+            document.getElementById("scc" + slideRight1).style.display = "none";
+            slideLeft1 -= 1;
+            slideRight1 -= 1;
+
+            for (let i = slideLeft1; i <= slideRight1; i++) {
+            document.getElementById("scc" + i).style.display = "inline-block";
+            }
+        } else {
+            return;
+        } 
+    }
+
+    function mailSent() {
+        let email = document.getElementById("email").value;
+
+        if (email != null) {
+            setTimeout(function () {
+                alert("Subscribed, you will receive daily tips on mail!")
+            }, 3000);
+        }
+    }
+</script>

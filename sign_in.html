@@ -19,15 +19,15 @@
         </header>
 
         <div class="Form_Box">
-          <input type="email" class="Form_Ip" placeholder="Email">
-          <label class="Form_Invisible">Email</label>
+          <input id="Email" type="email" class="Form_Ip" name="user_email" placeholder="Email">
+          <label class="Form_Invisible" for="user_email">Email</label>
         </div>
 
-        <div class="Form_Box">
-          <input type="password" class="Form_Ip" placeholder="Password">
-            <button class="Help_btn" onclick="go_to_recovery(event)">Forgot password?</button>
-          <label class="Form_Invisible">Password</label>
+        <div class="Form_Box" style="border: 1px solid #12284c; display: flex;">
+          <input id="Password" type="password" style="width: 330px; border: none;" class="Form_Ip" name="password" placeholder="Password">
+          <button class="Help_btn" type="button" onclick="window.location.href='forgot_password.html'">Forgot password?</button>
         </div>
+        <label class="Form_Invisible" for="password">Password</label>
 
         <a>
             <button class="End_btn">LOGIN</button>
@@ -42,12 +42,7 @@
 
 </body>
 </html>
-<script>
-  function go_to_recovery(event) {
-    event.preventDefault()
-    window.location.href="forgot_password.html"
-  }
-</script>
+<script src="form.js"></script>
 
 
 

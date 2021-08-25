@@ -30,9 +30,8 @@ button {
 
 }
 .Help_btn {
-    float: right;
     cursor: pointer;
-    background: white;
+    background: transparent;
     border: none;
 }
 .End_btn {

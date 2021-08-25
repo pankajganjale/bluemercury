@@ -8,6 +8,10 @@
     <title>Document</title>
     <style>
         /* Full Body */
+        body {
+            font-family: "Montserrat Light", sans-serif;
+            line-height: 1.65;
+        }
         #new-start {
             width: 90%;
             margin: auto;
@@ -69,14 +73,19 @@
             margin-bottom: 20px;
         }
 
+        /* Right Side Part Above Products */
+
         #right-head {
             display: flex;
         }
-        #right-head div h2 {
+        #right-head div:nth-child(1) {
             font-size: 28px;
-            margin-top: 0;
-            margin-bottom: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 30px;
             color: #12284c;
+            margin-top: 5px;
+            margin-bottom: 15px;
         }
         
         #right-head div label {
@@ -97,6 +106,40 @@
             height: 30px;
             color: #8b8c8b;
             border: 1px solid #8b8c8b;
+        }
+
+        /* Products Part */
+
+        #right-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 25px;
+        }
+
+        #right-body div {
+            text-align: center;
+        }
+        #right-body div img {
+            height: 200px;
+        }
+        #right-body div p {
+            width: 100%;
+        }
+        #right-body div p:nth-child(2) {
+            color: #12284c;
+            font-size: 14px;
+            font-family: "Montserrat Medium", sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            line-height: 24px;
+        }
+        #right-body div p:nth-child(3), #right-body div p:nth-child(4) {
+            color: #8b8c8b;
+            font-family: "Montserrat Light", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.18px;
+            line-height: 20px;
         }
     </style>
 </head>
@@ -199,7 +242,7 @@
         <div>
             <!-- Right Section Head Part -->
             <div id="right-head">
-                <div><h2>NEW ARRIVALS</h2></div>
+                <div>NEW ARRIVALS</div>
                 <div>
                     <label for="sort">SORT BY</label>
 
@@ -242,5 +285,34 @@
             }
         });
     }
+
+    // Adding Products in HTML
+    let accessing = localStorage.getItem("bluemercuryProducts");
+    let productData = JSON.parse(accessing);
+    
+    function addData() {
+        let mainDiv = document.getElementById("right-body");
+
+        productData.forEach(function (product) {
+            let div = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = product.image;
+
+            let p1 = document.createElement("p");
+            p1.innerText = product.brand;
+
+            let p2 = document.createElement("p");
+            p2.innerText = product.name;
+
+            let price = `$${product.price}`
+            let p3 = document.createElement("p");
+            p3.innerText = price;
+
+            div.append(image, p1, p2, p3);
+            mainDiv.append(div);
+        })
+    }
+    addData();
 
 </script>

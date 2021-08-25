@@ -58,3 +58,30 @@ function mailSent() {
         }, 3000);
     }
 }
+
+// Function for User Login
+function loginUser(event) {
+    event.preventDefault();
+
+    let mail = document.getElementById("Email").value;
+    let pass = document.getElementById("Password").value;
+
+    let accessData = localStorage.getItem("bluemercuryUser");
+    let user = JSON.parse(accessData);
+
+    let count = 0;
+    for (let i = 0; i < user.length; i++) {
+        if (Object.values(user[i])[0] === mail && Object.values(user[i])[3] === pass) {
+            count++;
+        }
+    }
+
+    if (count === 1) {
+        window.location.href = "index.html";
+    } else {
+        alert("Invalid Credentials!")
+    }
+
+    document.getElementById("Email").value = null;
+    document.getElementById("Password").value = null;
+}

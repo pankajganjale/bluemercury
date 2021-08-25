@@ -246,11 +246,11 @@
                 <hr>
             </button>
             <div class="dropdown-container">
-                <div><button>Kiehl's Since 1851</button></div>
-                <div><button>Bumble And Bumble</button></div>
-                <div><button>Tom Ford</button></div>
-                <div><button>Chantecaille</button></div>
-                <div><button>111SKIN</button></div>
+                <div><button onclick="kiehl()">Kiehl's Since 1851</button></div>
+                <div><button onclick="bumble()">Bumble And Bumble</button></div>
+                <div><button onclick="tom()">Tom Ford</button></div>
+                <div><button onclick="chan()">Chantecaille</button></div>
+                <div><button onclick="skin()">111SKIN</button></div>
             </div>
             <!-- Shop By Dropdown -->
             <button class="dropdown-btn">
@@ -503,4 +503,174 @@
     }
     addData();
 
+    // For Brand 1 Sorting
+    function kiehl() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let dummy = [];
+        for (let i = 0; i < preSort.length; i++) {
+            if (Object.values(preSort[i])[1] === "KIEHL'S SINCE 1851") {
+                dummy.push(preSort[i])
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        dummy.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let amount = data.price;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${amount}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // For Brand 2 Sorting
+    function bumble() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let dummy = [];
+        for (let i = 0; i < preSort.length; i++) {
+            if (Object.values(preSort[i])[1] === "BUMBLE AND BUMBLE") {
+                dummy.push(preSort[i])
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        dummy.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let amount = data.price;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${amount}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // For Brand 3 Sorting
+    function tom() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let dummy = [];
+        for (let i = 0; i < preSort.length; i++) {
+            if (Object.values(preSort[i])[1] === "TOM FORD") {
+                dummy.push(preSort[i])
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        dummy.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let amount = data.price;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${amount}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // For Brand 4 Sorting
+    function chan() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let dummy = [];
+        for (let i = 0; i < preSort.length; i++) {
+            if (Object.values(preSort[i])[1] === "CHANTECAILLE") {
+                dummy.push(preSort[i])
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        dummy.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let amount = data.price;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${amount}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // For Brand 5 Sorting
+    function skin() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let dummy = [];
+        for (let i = 0; i < preSort.length; i++) {
+            if (Object.values(preSort[i])[1] === "111SKIN") {
+                dummy.push(preSort[i])
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        dummy.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let amount = data.price;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${amount}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // Function for Mail Subscription in Footer
+    function mailSent() {
+        let email = document.getElementById("email").value;
+
+        if (email != null) {
+            setTimeout(function () {
+                alert("Subscribed, you will receive daily tips on mail!")
+            }, 3000);
+        }
+    }
 </script>

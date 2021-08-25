@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="from.css">
+</head>
+<body>
+
+    <form id="customer_login" class="Form">
+        <header class="Form_header">
+          <h1>LOGIN</h1>
+          <p>Please enter your e-mail and password:</p>
+        </header>
+
+        <div class="Form_Box">
+          <input type="email" class="Form_Ip" placeholder="Email">
+          <label class="Form_Invisible">Email</label>
+        </div>
+
+        <div class="Form_Box">
+          <input type="password" class="Form_Ip" placeholder="Password">
+            <button class="Help_btn" onclick="go_to_recovery(event)">Forgot password?</button>
+          <label class="Form_Invisible">Password</label>
+        </div>
+
+        <a>
+            <button class="End_btn">LOGIN</button>
+        </a>
+
+        <div class="centre">
+          <span>Don't have an account?</span>
+          <a href="create_one.html">Create one</a>
+        </div>
+
+    </form>
+
+</body>
+</html>
+<script>
+  function go_to_recovery(event) {
+    event.preventDefault()
+    window.location.href="forgot_password.html"
+  }
+</script>
+
+
+

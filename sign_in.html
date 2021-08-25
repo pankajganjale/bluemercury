@@ -13,26 +13,27 @@
 <body>
 
     <form id="customer_login" class="Form">
+      <!-- Heading -->
         <header class="Form_header">
           <h1>LOGIN</h1>
           <p>Please enter your e-mail and password:</p>
         </header>
-
+        <!-- Email i/p box -->
         <div class="Form_Box">
           <input id="Email" type="email" class="Form_Ip" name="user_email" placeholder="Email">
           <label class="Form_Invisible" for="user_email">Email</label>
         </div>
-
+        <!-- Password i/p box -->
         <div class="Form_Box" style="border: 1px solid #12284c; display: flex;">
           <input id="Password" type="password" style="width: 330px; border: none;" class="Form_Ip" name="password" placeholder="Password">
           <button class="Help_btn" type="button" onclick="window.location.href='forgot_password.html'">Forgot password?</button>
         </div>
         <label class="Form_Invisible" for="password">Password</label>
-
+        <!-- Login button -->
         <a>
             <button class="End_btn">LOGIN</button>
         </a>
-
+        <!-- note -->
         <div class="centre">
           <span>Don't have an account?</span>
           <a href="create_one.html">Create one</a>

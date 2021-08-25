@@ -9,6 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="from.css">
+    <style>
+
+      /* Hide expandable content by default */
+      .expandable {
+        visibility: collapse;
+      }
+      /* Show hidden content when the checkbox is checked */
+      #expand-toggle:checked ~ * .expandable {
+        visibility: visible;
+      }
+    </style>
 </head>
 <body>
 
@@ -34,28 +45,34 @@
               <input id="Creat_Password" type="password" class="Form_Ip" name="password" placeholder="Password*" required="required">
               <label class="Form_Invisible">Password</label>
             </div>
-            <div class="Form_Box ">
-              <div class="">
-                <select class="Bday">
-                  <option value="">Birthday Month</option>
-                  <option value="01">January</option>
-                  <option value="02">February</option>
-                  <option value="03">March</option>
-                  <option value="04">April</option>
-                  <option value="05">May</option>
-                  <option value="06">June</option>
-                  <option value="07">July</option>
-                  <option value="08">August</option>
-                  <option value="09">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
-                </select>
-              </div>
-            </div>
+
+            <table>
+              <tbody>
+                <tr class="expandable">
+                  <td>
+                    <select id="B-day">
+                      <option value="">Birthday Month</option>
+                      <option value="01">January</option>
+                      <option value="02">February</option>
+                      <option value="03">March</option>
+                      <option value="04">April</option>
+                      <option value="05">May</option>
+                      <option value="06">June</option>
+                      <option value="07">July</option>
+                      <option value="08">August</option>
+                      <option value="09">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+                    </select>
+                  </td>
+              </tbody>
+            </table>
+
+            
             <p class="Note">*Indicates Required Field</p>
             <div class="Offer_box">
-                <input type="checkbox">
+                <input type="checkbox" id="expand-toggle" />
                 <div class="logo_box">
                   <span class="Join">Join</span>
                   <span class="Rewards">
@@ -65,7 +82,7 @@
                 </div>
                     
                 <div class="loyalty_info">
-                  <span>
+                  <span style="margin-top: 5px;">
                     Earn $10 for every $250 you spend, plus FREE birthday gifts &amp; treatments!
                   </span>
                 </div>

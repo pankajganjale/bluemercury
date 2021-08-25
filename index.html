@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            font-family: "Montserrat Light", sans-serif;
+        }
         /* For Sliders */
         #slide-new-arrival {
             width: 90%;
@@ -17,6 +20,7 @@
             text-align: center;
             font-size: 28px;
             color: #12284c;
+            font-weight: 400;
         }
 
         .slide-parent {
@@ -40,12 +44,18 @@
         }
 
         .slide-child img~p {
-            font-size: 16px;
+            font-size: 14px;
             color: #8b8c8b;
+        }
+
+        .slide-child p:nth-child(3) {
+            font-weight: 300;
         }
 
         .slide-child img+p {
             color: #12284c;
+            letter-spacing: .2px;
+            font-weight: 300;
         }
 
         #slide-leftarrow button,
@@ -82,14 +92,21 @@
 
         #inbetween div p:nth-child(1) {
             color: #12284c;
-            font-size: 28px;
-            width: 80%;
+            font-size: 24px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            width: 70%;
+            font-weight: 700;
+            margin-bottom: 0;
         }
 
         #inbetween div p:nth-child(2) {
             color: #8b8c8b;
             font-size: 20px;
-            width: 80%;
+            max-width: 70%;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
         }
 
         /* Part after Second Slider */
@@ -109,16 +126,18 @@
         }
 
         #before-footer div img+p {
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 500;
+            color: #12284c;
             margin-bottom: 10px;
         }
 
         #before-footer div p:nth-child(3) {
-            font-size: 16px;
+            font-size: 14px;
             color: #7d7d7d;
             width: 90%;
             margin: 0 auto;
+            line-height: 1.25;
         }
 
         /* For Footer */
@@ -143,19 +162,21 @@
         }
 
         #foot div:nth-child(n+1) p:nth-child(1) {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         #foot div:nth-child(n+1) p:nth-child(1)~p {
-            font-size: 15px;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
         }
 
         #foot-first {
-            font-size: 15px;
+            font-size: 14px;
         }
 
         #foot-first p:nth-child(1) {
-            font-size: 16px;
+            font-size: 14px;
             color: #12284c;
         }
 

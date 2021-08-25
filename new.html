@@ -18,6 +18,7 @@
             display: grid;
             grid-template-columns: 1fr 4fr;
             grid-gap: 50px;
+            margin-bottom: 25px;
         }
 
         /* For Dropdown */
@@ -128,18 +129,66 @@
         #right-body div p:nth-child(2) {
             color: #12284c;
             font-size: 14px;
-            font-family: "Montserrat Medium", sans-serif;
             font-weight: 400;
             letter-spacing: 0.2px;
             line-height: 24px;
         }
         #right-body div p:nth-child(3), #right-body div p:nth-child(4) {
             color: #8b8c8b;
-            font-family: "Montserrat Light", sans-serif;
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 0.18px;
             line-height: 20px;
+        }
+
+        /* For Footer */
+
+        #foot {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            width: 90%;
+            margin: 25px auto;
+            grid-gap: 50px;
+            color: #7d7d7d;
+        }
+
+        #foot div button {
+            border: none;
+            background: transparent;
+        }
+
+        #foot div input {
+            background: transparent;
+            border: none;
+        }
+
+        #foot div:nth-child(n+1) p:nth-child(1) {
+            font-size: 14px;
+        }
+
+        #foot div:nth-child(n+1) p:nth-child(1)~p {
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+        }
+
+        #foot-first {
+            font-size: 14px;
+        }
+
+        #foot-first p:nth-child(1) {
+            font-size: 14px;
+            color: #12284c;
+        }
+
+        #foot-first div:nth-child(4) {
+            font-size: 14px;
+            margin: 10px 0px;
+            width: 80%;
+        }
+
+        .copyright {
+            font-size: 10px;
         }
     </style>
 </head>
@@ -261,6 +310,45 @@
             </div>
         </div>
     </div>
+    <hr/>
+    <!-- Footer Start -->
+    <div id="foot">
+        <div id="foot-first">
+            <p>Get Expert Beauty Insight & Offers</p>
+            <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
+            <button onclick="mailSent()">&rarr;</button>
+            <div>To learn more about how we use your information and your rights, see Privacy Note</div>
+            <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
+        </div>
+        <div>
+            <p>BLUEMERCURY</p>
+            <p>Our Company</p>
+            <p>Store Locator</p>
+            <p>Spa Menu</p>
+            <p>Press</p>
+            <p>Careers</p>
+        </div>
+        <div>
+            <p>MY ACCOUNT</p>
+            <p>My Account</p>
+            <p>Blue Rewards</p>
+        </div>
+        <div>
+            <p>CUSTOMER SERVICE</p>
+            <p>Contact Us</p>
+            <p>Help & FAQ</p>
+            <p>Offers</p>
+            <p>Klarna</p>
+        </div>
+        <div>
+            <p>RESOURCES</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Accessibility</p>
+            <p>COVID-19 Updates</p>
+        </div>
+    </div>
+    <!-- Footer End -->
 </body>
 
 </html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Full Body */
+        #new-start {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-gap: 50px;
+        }
+
+        /* For Dropdown */
+        .dropdown-container {
+            display: none;
+        }
+
+        .dropdown-container div button {
+            background: transparent;
+            border: none;
+            color: #8b8c8b;
+            font-size: 14px;
+        }
+
+        .dropdown-btn {
+            border: none;
+            background: transparent;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .btn-inside {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        .plus {
+            font-size: 30px;
+            text-align: right;
+            color: #8b8c8b;
+        }
+
+        .btn-inside div:nth-child(1) {
+            text-align: left;
+        }
+
+        .above-smallest {
+            font-size: 14px;
+            color: #12284c;
+        }
+
+        .smallest {
+            font-size: 10px;
+            color: #8b8c8b;
+            padding-top: 4px;
+        }
+
+        #inbetween-dropdown {
+            font-size: 14px;
+            color: #12284c;
+            padding-left: 7px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        #right-head {
+            display: flex;
+        }
+        #right-head div h2 {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: #12284c;
+        }
+        
+        #right-head div label {
+            font-size: 14px;
+            color: #12284c;
+            margin-right: 10px;
+        }
+        #right-head div:nth-child(1) {
+            flex-grow: 3;
+        }
+        #right-head div:nth-child(2) {
+            margin-top: 10px;
+        }
+        option {
+            color: #8b8c8b;
+        }
+        select {
+            height: 30px;
+            color: #8b8c8b;
+            border: 1px solid #8b8c8b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="new-start">
+        <div class="new-start1">
+            <!-- New Arrivals Dropdown -->
+            <button class="dropdown-btn">
+                <div class="btn-inside">
+                    <div>
+                        <div class="above-smallest">NEW ARRIVALS CATEGORY</div>
+                        <div class="smallest">Select One to narrow results</div>
+                    </div>
+                    <div class="plus">+</div>
+                </div>
+                <hr>
+            </button>
+            <div class="dropdown-container">
+                <div><button>Makeup New Arrivals</button></div>
+                <div><button>Skin Care New Arrivals</button></div>
+                <div><button>Hair New Arrivals</button></div>
+                <div><button>Men's New Arrivals</button></div>
+                <div><button>Sun Care New Arrivals</button></div>
+            </div>
+            <p id="inbetween-dropdown">FILTER PRODUCTS BY</p>
+            <!-- Type Dropdown -->
+            <button class="dropdown-btn">
+                <div class="btn-inside">
+                    <div>
+                        <div class="above-smallest">Type</div>
+                        <div class="smallest">81 available</div>
+                    </div>
+                    <div class="plus">+</div>
+                </div>
+                <hr>
+            </button>
+            <div class="dropdown-container">
+                <div><button>Anti-Aging Devices</button></div>
+                <div><button>Bath And Body Sets</button></div>
+                <div><button>Cleansers</button></div>
+                <div><button>Conditioners</button></div>
+                <div><button>Deodorants</button></div>
+                <div><button>Eye Masks</button></div>
+            </div>
+            <!-- Brand Dropdown -->
+            <button class="dropdown-btn">
+                <div class="btn-inside">
+                    <div>
+                        <div class="above-smallest">Brand</div>
+                        <div class="smallest">73 available</div>
+                    </div>
+                    <div class="plus">+</div>
+                </div>
+                <hr>
+            </button>
+            <div class="dropdown-container">
+                <div><button>Kiehl's Since 1851</button></div>
+                <div><button>Bumble And Bumble</button></div>
+                <div><button>Tom Ford</button></div>
+                <div><button>Chantecaille</button></div>
+                <div><button>111SKIN</button></div>
+            </div>
+            <!-- Shop By Dropdown -->
+            <button class="dropdown-btn">
+                <div class="btn-inside">
+                    <div>
+                        <div class="above-smallest">Shop By</div>
+                        <div class="smallest">4 available</div>
+                    </div>
+                    <div class="plus">+</div>
+                </div>
+                <hr>
+            </button>
+            <div class="dropdown-container">
+                <div><button>Best Seller</button></div>
+                <div><button>Cooming Soon</button></div>
+                <div><button>Exclusive</button></div>
+                <div><button>Limited Edition</button></div>
+            </div>
+            <!-- Conscious Beauty Dropdown -->
+            <button class="dropdown-btn">
+                <div class="btn-inside">
+                    <div>
+                        <div class="above-smallest">Conscious Beauty</div>
+                        <div class="smallest">4 available</div>
+                    </div>
+                    <div class="plus">+</div>
+                </div>
+                <hr>
+            </button>
+            <div class="dropdown-container">
+                <div><button>Mindful Ingredients</button></div>
+                <div><button>Naturally Derived</button></div>
+                <div><button>Vegan And Cruelty Free</button></div>
+                <div><button>Wellness</button></div>
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div>
+            <!-- Right Section Head Part -->
+            <div id="right-head">
+                <div><h2>NEW ARRIVALS</h2></div>
+                <div>
+                    <label for="sort">SORT BY</label>
+
+                    <select name="sort" id="sort" onchange="func(this.value)">
+                        <option value="newarrivals" id="newArrivals">New Arrivals</option>
+                        <option value="bestseller" id="bestSeller">Best Sellers</option>
+                        <option value="ltoh" id="lToH">Price, Low To High</option>
+                        <option value="htol" id="hToL">Price, High To Low</option>
+                    </select>
+                </div>
+            </div>
+            <hr/>
+            <!-- Right Section Products -->
+            <div id="right-body">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function func(a) {
+        console.log(a)
+    }
+
+    // Function for Dropdown
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+</script>

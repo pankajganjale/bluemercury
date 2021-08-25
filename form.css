@@ -11,6 +11,7 @@
     width: 500px;
     margin: auto;
     color: #12284c;
+    margin-bottom: 50px;
 }
 .Form_header > h1, p {
     text-align: center;
@@ -94,4 +95,59 @@ button {
 }
 .loyalty_info {
     width: 300px;
+    padding-top: 8px;
+}
+
+/* For Footer */
+
+#foot {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    width: 90%;
+    margin: 25px auto;
+    grid-gap: 50px;
+    color: #7d7d7d;
+}
+
+#foot div button {
+    border: none;
+    background: transparent;
+}
+
+#foot div input {
+    background: transparent;
+    border: none;
+}
+
+#foot div:nth-child(n+1) p:nth-child(1) {
+    font-size: 14px;
+    text-align: left;
+}
+
+#foot div:nth-child(n+1) p:nth-child(1)~p {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-align: left;
+}
+
+#foot-first {
+    font-size: 14px;
+}
+
+#foot-first p:nth-child(1) {
+    font-size: 14px;
+    color: #12284c;
+    text-align: left;
+}
+
+#foot-first div:nth-child(4) {
+    font-size: 14px;
+    margin: 10px 0px;
+    width: 80%;
+}
+
+.copyright {
+    font-size: 10px;
+    text-align: left;
 }

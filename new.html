@@ -295,7 +295,7 @@
                 <div>
                     <label for="sort">SORT BY</label>
 
-                    <select name="sort" id="sort" onchange="func(this.value)">
+                    <select name="sort" id="sort" onchange="sorting(this.value)">
                         <option value="newarrivals" id="newArrivals">New Arrivals</option>
                         <option value="bestseller" id="bestSeller">Best Sellers</option>
                         <option value="ltoh" id="lToH">Price, Low To High</option>
@@ -354,8 +354,108 @@
 </html>
 
 <script>
-    function func(a) {
-        console.log(a)
+    // Low To High
+    function lowToHigh() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let rat = [];
+
+        for (let i = 0; i < preSort.length; i++) {
+            rat.push(Object.values(preSort[i])[3]);
+        }
+
+        rat.sort();
+        console.log(rat)
+
+        let newArr = [];
+
+        for (let i = 0; i < rat.length; i++) {
+            for (let j = 0; j < preSort.length; j++) {
+                if (rat[i] === Object.values(preSort[j])[3]) {
+                    newArr.push(preSort[j]);
+                }
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        newArr.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let amount = data.price;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${amount}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // Sort High To Low 
+    function highToLow() {
+        let access = localStorage.getItem("bluemercuryProducts");
+        let preSort = JSON.parse(access);
+
+        let rat = [];
+
+        for (let i = 0; i < preSort.length; i++) {
+            rat.push(Object.values(preSort[i])[3]);
+        }
+
+        rat.sort();
+
+        let rat1 = []
+
+        for (let i = rat.length-1; i >= 0; i--) {
+            rat1.push(rat[i]);
+        }
+
+        let newArr = [];
+
+        for (let i = 0; i < rat1.length; i++) {
+            for (let j = 0; j < preSort.length; j++) {
+                if (rat1[i] === Object.values(preSort[j])[3]) {
+                    newArr.push(preSort[j]);
+                }
+            }
+        }
+
+        document.getElementById("right-body").innerHTML = null;
+
+        let mainDiv = document.getElementById("right-body");
+        newArr.forEach(function (data) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image;
+            let p1 = document.createElement("p");
+            p1.innerText = data.brand;
+            let p2 = document.createElement("p");
+            p2.innerText = data.name;
+            let p3 = document.createElement("p");
+            p3.innerText = `$${data.price}`;
+
+            div.append(img, p1, p2, p3);
+            mainDiv.append(div);
+        });
+    }
+
+    // For Sorting
+    function sorting(a) {
+        if (a === "ltoh") {
+           lowToHigh();
+        } else if (a === "htol") {
+            highToLow();
+        } else if (a === "newarrivals") {
+            document.getElementById("right-body").innerHTML = null;
+            addData();
+        }
     }
 
     // Function for Dropdown

@@ -8,12 +8,17 @@
     <title>Document</title>
     <style>
         /* Full Body */
+        body {
+            font-family: "Montserrat Light", sans-serif;
+            line-height: 1.65;
+        }
         #new-start {
             width: 90%;
             margin: auto;
             display: grid;
             grid-template-columns: 1fr 4fr;
             grid-gap: 50px;
+            margin-bottom: 25px;
         }
 
         /* For Dropdown */
@@ -69,14 +74,19 @@
             margin-bottom: 20px;
         }
 
+        /* Right Side Part Above Products */
+
         #right-head {
             display: flex;
         }
-        #right-head div h2 {
+        #right-head div:nth-child(1) {
             font-size: 28px;
-            margin-top: 0;
-            margin-bottom: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 30px;
             color: #12284c;
+            margin-top: 5px;
+            margin-bottom: 15px;
         }
         
         #right-head div label {
@@ -97,6 +107,88 @@
             height: 30px;
             color: #8b8c8b;
             border: 1px solid #8b8c8b;
+        }
+
+        /* Products Part */
+
+        #right-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 25px;
+        }
+
+        #right-body div {
+            text-align: center;
+        }
+        #right-body div img {
+            height: 200px;
+        }
+        #right-body div p {
+            width: 100%;
+        }
+        #right-body div p:nth-child(2) {
+            color: #12284c;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            line-height: 24px;
+        }
+        #right-body div p:nth-child(3), #right-body div p:nth-child(4) {
+            color: #8b8c8b;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.18px;
+            line-height: 20px;
+        }
+
+        /* For Footer */
+
+        #foot {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            width: 90%;
+            margin: 25px auto;
+            grid-gap: 50px;
+            color: #7d7d7d;
+        }
+
+        #foot div button {
+            border: none;
+            background: transparent;
+        }
+
+        #foot div input {
+            background: transparent;
+            border: none;
+        }
+
+        #foot div:nth-child(n+1) p:nth-child(1) {
+            font-size: 14px;
+        }
+
+        #foot div:nth-child(n+1) p:nth-child(1)~p {
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+        }
+
+        #foot-first {
+            font-size: 14px;
+        }
+
+        #foot-first p:nth-child(1) {
+            font-size: 14px;
+            color: #12284c;
+        }
+
+        #foot-first div:nth-child(4) {
+            font-size: 14px;
+            margin: 10px 0px;
+            width: 80%;
+        }
+
+        .copyright {
+            font-size: 10px;
         }
     </style>
 </head>
@@ -199,7 +291,7 @@
         <div>
             <!-- Right Section Head Part -->
             <div id="right-head">
-                <div><h2>NEW ARRIVALS</h2></div>
+                <div>NEW ARRIVALS</div>
                 <div>
                     <label for="sort">SORT BY</label>
 
@@ -218,6 +310,45 @@
             </div>
         </div>
     </div>
+    <hr/>
+    <!-- Footer Start -->
+    <div id="foot">
+        <div id="foot-first">
+            <p>Get Expert Beauty Insight & Offers</p>
+            <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
+            <button onclick="mailSent()">&rarr;</button>
+            <div>To learn more about how we use your information and your rights, see Privacy Note</div>
+            <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
+        </div>
+        <div>
+            <p>BLUEMERCURY</p>
+            <p>Our Company</p>
+            <p>Store Locator</p>
+            <p>Spa Menu</p>
+            <p>Press</p>
+            <p>Careers</p>
+        </div>
+        <div>
+            <p>MY ACCOUNT</p>
+            <p>My Account</p>
+            <p>Blue Rewards</p>
+        </div>
+        <div>
+            <p>CUSTOMER SERVICE</p>
+            <p>Contact Us</p>
+            <p>Help & FAQ</p>
+            <p>Offers</p>
+            <p>Klarna</p>
+        </div>
+        <div>
+            <p>RESOURCES</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Accessibility</p>
+            <p>COVID-19 Updates</p>
+        </div>
+    </div>
+    <!-- Footer End -->
 </body>
 
 </html>
@@ -242,5 +373,34 @@
             }
         });
     }
+
+    // Adding Products in HTML
+    let accessing = localStorage.getItem("bluemercuryProducts");
+    let productData = JSON.parse(accessing);
+    
+    function addData() {
+        let mainDiv = document.getElementById("right-body");
+
+        productData.forEach(function (product) {
+            let div = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = product.image;
+
+            let p1 = document.createElement("p");
+            p1.innerText = product.brand;
+
+            let p2 = document.createElement("p");
+            p2.innerText = product.name;
+
+            let price = `$${product.price}`
+            let p3 = document.createElement("p");
+            p3.innerText = price;
+
+            div.append(image, p1, p2, p3);
+            mainDiv.append(div);
+        })
+    }
+    addData();
 
 </script>

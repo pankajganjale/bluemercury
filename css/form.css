@@ -7,11 +7,17 @@
 .expand-toggle:checked ~ * .expandable {
     visibility: visible;
 }
+#customer-login {
+    margin-top: 100px;
+}
 .Form {
     width: 500px;
     margin: auto;
     color: #12284c;
     margin-bottom: 50px;
+}
+.recover-form {
+    margin-bottom: 250px;
 }
 .Form_header > h1, p {
     text-align: center;
@@ -99,6 +105,9 @@ button {
 }
 #customer-login {
     margin-bottom: 200px;
+}
+#create_customer {
+    margin-top: 50px;
 }
 
 /* For Footer */

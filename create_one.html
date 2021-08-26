@@ -10,50 +10,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="form.css">
-  <style>
-    /* Hide expandable content by default */
-    .expandable {
-      visibility: collapse;
-    }
-
-    /* Show hidden content when the checkbox is checked */
-    #expand-toggle:checked~* .expandable {
-      visibility: visible;
-    }
-  </style>
 </head>
 
 <body>
-
+  <!-- Form -->
   <div>
     <form id="create_customer" class="Form" onsubmit="bluemercuryUser(event)">
+      <!-- Form Heading -->
       <header class="Form_header">
         <h1>CREATE ACCOUNT</h1>
         <p>Complete the form below to create a bluemercury.com account.</p>
       </header>
-
+      <!-- Email i/p box -->
       <div class="Form_Box">
         <input id="CreateAccountEmail" type="email" class="Form_Ip" name="customer[email]" aria-label="Email"
           placeholder="Email*" required="required">
         <label class="Form_Invisible">Email</label>
       </div>
+      <!-- First name i/p box -->
       <div class="Form_Box">
         <input id="CreateAccountFirstName" type="text" class="Form_Ip" name="customer[first_name]"
           aria-label="First Name" placeholder="First Name*" autofocus="" required="required">
         <label class="Form_Invisible">First Name</label>
       </div>
+      <!-- Last name i/p box -->
       <div class="Form_Box">
         <input id="Creat_LastName" type="text" class="Form_Ip" name="last_name" placeholder="Last Name*"
           required="required">
         <label class="Form_Invisible">Last Name</label>
       </div>
+      <!-- Password i/p box -->
       <div class="Form_Box">
         <input id="Creat_Password" type="password" class="Form_Ip" name="password" placeholder="Password*"
           required="required">
         <label class="Form_Invisible">Password</label>
       </div>
-
+      <!-- note -->
       <p class="Note">*Indicates Required Field</p>
+      <!-- Loyalty offer box -->
       <div class="Offer_box">
         <input type="checkbox" id="expand-toggle" />
         <div class="logo_box">
@@ -63,16 +57,13 @@
             Rewards
           </span>
         </div>
-
         <div class="loyalty_info">
           <span style="margin-top: 5px;">
             Earn $10 for every $250 you spend, plus FREE birthday gifts &amp; treatments!
           </span>
         </div>
-
       </div>
-
-
+      <!-- note -->
       <div>
         <div class="centre" style="color: #666666;">
           <p>To learn more about how we use your information and your rights, see
@@ -80,16 +71,15 @@
           </p>
         </div>
       </div>
-
+      <!-- Create account button -->
       <button class="End_btn" onclick="bluemercuryUser(event)">
         <span class="" style="width: 300px;">Create account</span>
       </button>
-
+      <!-- note -->
       <div class="centre">
         <span>Already have a bluemercury.com account?</span>
         <a href="sign_in.html">Sign In</a>
       </div>
-
     </form>
   </div>
 

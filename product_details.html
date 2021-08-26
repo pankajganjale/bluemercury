@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            display : flex;
+            /* background-color:cadetblue; */
+            width : 85%;
+            height :500px;
+            margin: auto;
+        }
+        .one_1{
+            flex-basis: 67%;
+            /* background-color: crimson; */
+        }
+        .one_2{
+            flex-basis: 33%;
+            /* background-color: darkgoldenrod; */
+        }
+        .one_1_1{
+            display: flex;
+            flex-direction: column;
+            /* scrollbar-width:thin; */
+            overflow-y: scroll;
+            width : 20%;
+            overflow-x: hidden;
+            
+        }
+        ::-webkit-scrollbar{
+            width: 2px;
+            background-color:lightgray
+        }
+        .one_1{
+            display: flex;
+        }
+        .one_2 > div:nth-child(1){
+            font-family: "Montserrat Semi Bold", sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color:#12284c
+            
+
+        }
+        .one_2 > div:nth-child(2){
+            font-family:"Montserrat Regular", sans-serif;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 26px;
+            color:#12284c;
+        }
+        .one_2 > div:nth-child(4){
+            font-family:"Montserrat Light", sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 23px;
+            color:#12284c;
+        }
+        .quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  /* -webkit-appearance: none; */
+  border: solid 1px gray;
+  text-align: center;
+  width: 30px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+  height: 24px;
+  margin-left: 0px;
+}
+ 
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color:lightgray;
+  /* border-radius: 6px; */
+  border:solid 1px gray;
+  cursor: pointer;
+}
+.minus-btn{
+    margin-right: 0px;
+}
+.plus-btn{
+    margin-left:0px;
+}
+.minus-btn img {
+  margin-bottom: 1px;
+  height:10px;
+  width:10px;
+  
+}
+.plus-btn img {
+  margin-top: 2px;
+  height:10px;
+  width:10px;
+}
+ 
+button:focus,
+input:focus {
+  outline:0;
+}
+#ff{
+    display: flex;
+} 
+#ff > div:nth-child(2) >a{
+    text-decoration: none;
+    /* padding:10px 20px; */
+    /* background-color: #12284C; */
+    color: white;
+    
+
+}
+#ff > div:nth-child(1){
+    flex-basis: 30%;
+    /* background-color: violet; */
+    margin-right: 0px;
+}
+#ff > div:nth-child(2){
+    flex-basis: 40%;
+    background-color:#12284C;
+    margin-top: 10px;
+    padding-left:45px ;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 45px;
+    margin-left: 15px;
+}
+.hh{
+    border:1px solid black;
+    /* background-color:yellowgreen; */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family:"Montserrat Light", sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 23px;
+            color:#12284c;
+}
+.bold{
+    font-weight: bold;
+}
+.o img{
+    height:20px;
+    width:20px;
+}
+.o{
+    margin-top: 10px;
+}
+    </style>
+
+</head>
+<body>
+    <div class="one">
+        <div class="one_1">
+            <div class="one_1_1">
+                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_100x.jpg?v=1629489864"></a>
+                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-2_100x.jpg?v=1629489864"></a>
+                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-3_100x.jpg?v=1629489865"></a>
+                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-4_100x.jpg?v=1629489865"></a>
+                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-5_100x.jpg?v=1629489865"></a>
+                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-6_100x.jpg?v=1629489865"></a>
+            </div>
+            <div></div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_525x525.jpg?v=1629489864">
+            </div>
+            <div></div>
+        </div>
+        <div class="one_2">
+            <div>KIEHL'S SINCE 1851</div>
+             <div>Micro-Dose Anti-Aging Retinol Serum with Ceramides and Peptide</div> 
+            <div>
+                <div>$60</div>
+                <div></div>
+                <div>(0)</div>
+            </div>
+            <div>A potent retinol serum in a daily-strength micro-dose that visibly reduces wrinkles, firms skin, evens skin tone, and smoothes texture with minimal discomfort. <a href="#"> See More</a></div>
+            <br> <br>
+            <hr>
+            <div id="ff">
+            <div class="quantity">
+                <button class="minus-btn" type="button" name="button" onclick="remove()">
+                    <img src="https://image.flaticon.com/icons/png/128/339/339879.png" alt="" />
+                  </button>
+                <input type="text" name="name" value="1">
+                <button class="plus-btn" type="button" name="button" onclick="add()">
+                    <img src="https://image.flaticon.com/icons/png/128/864/864380.png" alt="" />
+                  </button>
+              </div>
+              <div><a href="#">ADD TO BAG &nbsp|&nbsp $60</a></div>
+            </div>
+            <div class="hh">4 interest-free payments of $15.00 with <span class="bold">Klarna</span>.<a href="#"> Learn more</a></div>
+            <div class="heading_one">
+                <div>
+                    <img
+                        src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
+                </div>
+                <div>Add to Wishlist</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function add(){
+        var d=document.querySelector("input");
+        var c=d.value;
+        d.innerHTML=null;
+        input=Number(c);
+        input++;
+        d.value=input;
+    }
+    function remove(){
+        var d=document.querySelector("input");
+        var c=d.value;
+        d.innerHTML=null;
+        input=Number(c);
+        if(input === 1){
+            input = c;
+        }else{
+        input--;
+        }
+        d.value=input;
+    }
+</script>
+</html>

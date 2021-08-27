@@ -317,4 +317,4 @@ function mailSent() {
             document.getElementById("email").value = null;
         }, 3000);
     }
-}
+};

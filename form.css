@@ -195,3 +195,59 @@ button {
     font-size: 10px;
     text-align: left;
 }
+/* Payment css section */
+#Main {
+    color: #12284c;
+}
+/* .news-checkbox {
+    
+} */
+.Form_Ip_Name {
+    width: 250px;
+    height: 24px;
+    padding: 12px 14px;
+    border: 1px solid #12284c;
+    margin: 7px ;
+}
+.Payment_Form_Ip {
+    width: 545px;
+    height: 24px;
+    padding: 12px 14px;
+    border: 1px solid #12284c;
+    margin: 7px 7px;
+}
+.location {
+    font-size: 12px;
+}
+.location_list {
+    width: 170px;
+    height: 50px;
+    padding: 12px 14px;
+    border: 1px solid #12284c;
+    margin: 7px;
+}
+.pin {
+    width: 170px;
+    height: 24px;
+    padding: 12px 14px;
+    border: 1px solid #12284c;
+    margin: 7px;
+}
+.heading {
+    text-align: center;
+
+}
+.Paypal {
+    width: 70%;
+    height: 80px;
+    border: 1px solid rgb(156, 146, 146);
+    border-radius: 4px;
+    margin: 20px 15%;
+}
+.Paypal_button {
+    width: 250px;
+    height: 50px;
+    margin: 15px;
+    background-color: #FFC439;
+    border-radius: 4px;
+}

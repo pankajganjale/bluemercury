@@ -54,7 +54,8 @@ function mailSent() {
 
     if (email != null) {
         setTimeout(function () {
-            alert("Subscribed, you will receive daily tips on mail!")
+            alert("Subscribed, you will receive daily tips on mail!");
+            document.getElementById("email").value = null;
         }, 3000);
     }
 }
@@ -84,4 +85,33 @@ function loginUser(event) {
 
     document.getElementById("Email").value = null;
     document.getElementById("Password").value = null;
+}
+
+// For Recover Password
+
+function recoverPassword(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("Email_recover").value;
+
+    let accessing = localStorage.getItem("bluemercuryUser");
+    let convert = JSON.parse(accessing);
+
+    let passCount = 0;
+    for (let i = 0; i < convert.length; i++) {
+        if (Object.values(convert[i])[0] === email) {
+            setTimeout(function () {
+                alert("Password recovery link has been sent to your E-mail!");
+            }, 2000);
+            break;
+        } else if (Object.values(convert[i])[0] !== email) {
+            passCount++;
+        }
+    }
+    if (passCount === convert.length) {
+        setTimeout(function () {
+            alert("You are not a user. Create a new account!");
+            window.location.href = "create_one.html";
+        }, 2000);
+    }
 }

@@ -5,195 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Full Body */
-        body {
-            font-family: "Montserrat Light", sans-serif;
-            line-height: 1.65;
-        }
-        #new-start {
-            width: 90%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-            grid-gap: 50px;
-            margin-bottom: 25px;
-        }
-
-        /* For Dropdown */
-        .dropdown-container {
-            display: none;
-        }
-
-        .dropdown-container div button {
-            background: transparent;
-            border: none;
-            color: #8b8c8b;
-            font-size: 14px;
-        }
-
-        .dropdown-btn {
-            border: none;
-            background: transparent;
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .btn-inside {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-        }
-
-        .plus {
-            font-size: 30px;
-            text-align: right;
-            color: #8b8c8b;
-        }
-
-        .btn-inside div:nth-child(1) {
-            text-align: left;
-        }
-
-        .above-smallest {
-            font-size: 14px;
-            color: #12284c;
-        }
-
-        .smallest {
-            font-size: 10px;
-            color: #8b8c8b;
-            padding-top: 4px;
-        }
-
-        #inbetween-dropdown {
-            font-size: 14px;
-            color: #12284c;
-            padding-left: 7px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        /* Right Side Part Above Products */
-
-        #right-head {
-            display: flex;
-        }
-        #right-head div:nth-child(1) {
-            font-size: 28px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            line-height: 30px;
-            color: #12284c;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-        
-        #right-head div label {
-            font-size: 14px;
-            color: #12284c;
-            margin-right: 10px;
-        }
-        #right-head div:nth-child(1) {
-            flex-grow: 3;
-        }
-        #right-head div:nth-child(2) {
-            margin-top: 10px;
-        }
-        option {
-            color: #8b8c8b;
-        }
-        select {
-            height: 30px;
-            color: #8b8c8b;
-            border: 1px solid #8b8c8b;
-        }
-
-        /* Products Part */
-
-        #right-body {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 25px;
-        }
-
-        #right-body div {
-            text-align: center;
-        }
-        #right-body div img {
-            height: 200px;
-        }
-        #right-body div p {
-            width: 100%;
-        }
-        #right-body div p:nth-child(2) {
-            color: #12284c;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.2px;
-            line-height: 24px;
-        }
-        #right-body div p:nth-child(3), #right-body div p:nth-child(4) {
-            color: #8b8c8b;
-            font-size: 14px;
-            font-weight: 300;
-            letter-spacing: 0.18px;
-            line-height: 20px;
-        }
-
-        /* For Footer */
-
-        #foot {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-            width: 90%;
-            margin: 25px auto;
-            grid-gap: 50px;
-            color: #7d7d7d;
-        }
-
-        #foot div button {
-            border: none;
-            background: transparent;
-        }
-
-        #foot div input {
-            background: transparent;
-            border: none;
-        }
-
-        #foot div:nth-child(n+1) p:nth-child(1) {
-            font-size: 14px;
-        }
-
-        #foot div:nth-child(n+1) p:nth-child(1)~p {
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 0.2px;
-        }
-
-        #foot-first {
-            font-size: 14px;
-        }
-
-        #foot-first p:nth-child(1) {
-            font-size: 14px;
-            color: #12284c;
-        }
-
-        #foot-first div:nth-child(4) {
-            font-size: 14px;
-            margin: 10px 0px;
-            width: 80%;
-        }
-
-        .copyright {
-            font-size: 10px;
-        }
-    </style>
+    <title>Products</title>
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/header.css">    
 </head>
 
 <body>
+    <!-- Header Starts Here -->
+    <header>
+        <div>
+            <div id="heading_first_row">
+                <div class="heading_one">
+                    <div>
+                        <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href=""
+                            target="_blank"></a>
+                    </div>
+                    <div>STORE & SPA LOCATOR</div>
+                </div>
+                <div class="heading_one">
+                    <div>
+                        <img
+                            src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
+                    </div>
+                    <div>WISHLIST</div>
+                </div>
+                <div class="heading_one">
+                    <div>
+                        <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
+                    </div>
+                    <div>SEARCH</div>
+                </div>
+                <div id="click-log" class="heading_one">
+                    <div>
+                        <img
+                            src="https://static.thenounproject.com/png/3144376-200.png" />
+                    </div>
+                    <div>SIGN IN/UP</div>
+                </div>
+                <div class="heading_one">
+                    <div>
+                        <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
+                    </div>
+                    <div>BAG</div>
+                </div>
+            </div>
+            <div class="heading_two"><img id="img-click"
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
+            </div>
+            <div id="heading_second_row">
+                <div></div>
+                <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
+                <div><a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a></div>
+                <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
+                <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
+                <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
+                <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Ends Here -->
+
+    <div id="bluewards"></div>
+
     <div id="new-start">
         <div class="new-start1">
             <!-- New Arrivals Dropdown -->
@@ -353,324 +227,6 @@
 
 </html>
 
-<script>
-    // Low To High
-    function lowToHigh() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
+<script src="js/new.js"></script>
+<script src="js/header.js"></script>
 
-        let rat = [];
-
-        for (let i = 0; i < preSort.length; i++) {
-            rat.push(Object.values(preSort[i])[3]);
-        }
-
-        rat.sort();
-        console.log(rat)
-
-        let newArr = [];
-
-        for (let i = 0; i < rat.length; i++) {
-            for (let j = 0; j < preSort.length; j++) {
-                if (rat[i] === Object.values(preSort[j])[3]) {
-                    newArr.push(preSort[j]);
-                }
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        newArr.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let amount = data.price;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${amount}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // Sort High To Low 
-    function highToLow() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
-
-        let rat = [];
-
-        for (let i = 0; i < preSort.length; i++) {
-            rat.push(Object.values(preSort[i])[3]);
-        }
-
-        rat.sort();
-
-        let rat1 = []
-
-        for (let i = rat.length-1; i >= 0; i--) {
-            rat1.push(rat[i]);
-        }
-
-        let newArr = [];
-
-        for (let i = 0; i < rat1.length; i++) {
-            for (let j = 0; j < preSort.length; j++) {
-                if (rat1[i] === Object.values(preSort[j])[3]) {
-                    newArr.push(preSort[j]);
-                }
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        newArr.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${data.price}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // For Sorting
-    function sorting(a) {
-        if (a === "ltoh") {
-           lowToHigh();
-        } else if (a === "htol") {
-            highToLow();
-        } else if (a === "newarrivals") {
-            document.getElementById("right-body").innerHTML = null;
-            addData();
-        }
-    }
-
-    // Function for Dropdown
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-
-    // Adding Products in HTML
-    let accessing = localStorage.getItem("bluemercuryProducts");
-    let productData = JSON.parse(accessing);
-    
-    function addData() {
-        let mainDiv = document.getElementById("right-body");
-
-        productData.forEach(function (product) {
-            let div = document.createElement("div");
-
-            let image = document.createElement("img");
-            image.src = product.image;
-
-            let p1 = document.createElement("p");
-            p1.innerText = product.brand;
-
-            let p2 = document.createElement("p");
-            p2.innerText = product.name;
-
-            let price = `$${product.price}`
-            let p3 = document.createElement("p");
-            p3.innerText = price;
-
-            div.append(image, p1, p2, p3);
-            mainDiv.append(div);
-        })
-    }
-    addData();
-
-    // For Brand 1 Sorting
-    function kiehl() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
-
-        let dummy = [];
-        for (let i = 0; i < preSort.length; i++) {
-            if (Object.values(preSort[i])[1] === "KIEHL'S SINCE 1851") {
-                dummy.push(preSort[i])
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        dummy.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let amount = data.price;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${amount}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // For Brand 2 Sorting
-    function bumble() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
-
-        let dummy = [];
-        for (let i = 0; i < preSort.length; i++) {
-            if (Object.values(preSort[i])[1] === "BUMBLE AND BUMBLE") {
-                dummy.push(preSort[i])
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        dummy.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let amount = data.price;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${amount}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // For Brand 3 Sorting
-    function tom() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
-
-        let dummy = [];
-        for (let i = 0; i < preSort.length; i++) {
-            if (Object.values(preSort[i])[1] === "TOM FORD") {
-                dummy.push(preSort[i])
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        dummy.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let amount = data.price;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${amount}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // For Brand 4 Sorting
-    function chan() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
-
-        let dummy = [];
-        for (let i = 0; i < preSort.length; i++) {
-            if (Object.values(preSort[i])[1] === "CHANTECAILLE") {
-                dummy.push(preSort[i])
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        dummy.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let amount = data.price;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${amount}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // For Brand 5 Sorting
-    function skin() {
-        let access = localStorage.getItem("bluemercuryProducts");
-        let preSort = JSON.parse(access);
-
-        let dummy = [];
-        for (let i = 0; i < preSort.length; i++) {
-            if (Object.values(preSort[i])[1] === "111SKIN") {
-                dummy.push(preSort[i])
-            }
-        }
-
-        document.getElementById("right-body").innerHTML = null;
-
-        let mainDiv = document.getElementById("right-body");
-        dummy.forEach(function (data) {
-            let div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data.image;
-            let p1 = document.createElement("p");
-            p1.innerText = data.brand;
-            let p2 = document.createElement("p");
-            p2.innerText = data.name;
-            let amount = data.price;
-            let p3 = document.createElement("p");
-            p3.innerText = `$${amount}`;
-
-            div.append(img, p1, p2, p3);
-            mainDiv.append(div);
-        });
-    }
-
-    // Function for Mail Subscription in Footer
-    function mailSent() {
-        let email = document.getElementById("email").value;
-
-        if (email != null) {
-            setTimeout(function () {
-                alert("Subscribed, you will receive daily tips on mail!")
-            }, 3000);
-        }
-    }
-</script>

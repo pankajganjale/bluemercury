@@ -9,61 +9,65 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
 
-  
+  <!-- Header Starts Here -->
   <header>
     <div>
-        <div id="heading_first_row">
-            <div class="heading_one">
-                <div>
-                    <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href=""
-                        target="_blank"></a>
-                </div>
-                <div>STORE & SPA LOCATOR</div>
-            </div>
-            <div class="heading_one">
-                <div>
-                    <img
-                        src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
-                </div>
-                <div>WISHLIST</div>
-            </div>
-            <div class="heading_one">
-                <div>
-                    <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
-                </div>
-                <div>SEARCH</div>
-            </div>
-            <div class="heading_one">
-                <div>
-                    <img src="https://img-premium.flaticon.com/png/128/4046/premium/4046507.png?token=exp=1629817546~hmac=cfce40669af40d6f7e3b817108903c51" />
-                </div>
-                <div>SIGN IN/UP</div>
-            </div>
-            <div class="heading_one">
-                <div>
-                    <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
-                </div>
-                <div>BAG</div>
-            </div>
+      <div id="heading_first_row">
+        <div class="heading_one">
+          <div>
+            <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href="" target="_blank"></a>
+          </div>
+          <div>STORE & SPA LOCATOR</div>
         </div>
-        <div class="heading_two"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421"></div>
-            <div id="heading_second_row">
-                <div></div>
-                <div><a class = "heading_a" href="" target="_blank">SHOP</a></div>
-                <div><a class = "heading_a" href="" target="_blank">NEW!</a></div>
-                <div><a class = "heading_a" href="" target="_blank">BRANDS</a></div>
-                <div><a class = "heading_a" href="" target="_blank">EXPLORE</a></div>
-                <div><a class = "heading_a" href="" target="_blank">EVENTS</a></div>
-                <div><a class = "heading_a" href="" target="_blank">BLUEREWARDS</a></div>
-                <div></div>
-            </div>
+        <div class="heading_one">
+          <div>
+            <img src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
+          </div>
+          <div>WISHLIST</div>
+        </div>
+        <div class="heading_one">
+          <div>
+            <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
+          </div>
+          <div>SEARCH</div>
+        </div>
+        <div id="click-log" class="heading_one">
+          <div>
+            <img src="https://static.thenounproject.com/png/3144376-200.png" />
+          </div>
+          <div>SIGN IN/UP</div>
+        </div>
+        <div class="heading_one">
+          <div>
+            <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
+          </div>
+          <div>BAG</div>
+        </div>
+      </div>
+      <div class="heading_two"><img id="img-click"
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
+      </div>
+      <div id="heading_second_row">
+        <div></div>
+        <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
+        <div><a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a></div>
+        <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
+        <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
+        <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
+        <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
+        <div></div>
+      </div>
     </div>
   </header>
+  <!-- Header Ends Here -->
+
+  <div id="bluewards"></div>
 
   <form id="customer-login" class="Form">
     <header class="Form_header">
@@ -94,7 +98,7 @@
     </div>
 
   </form>
-  <hr/>
+  <hr />
   <!-- Footer Start -->
   <div id="foot">
     <div id="foot-first">
@@ -137,4 +141,5 @@
 </body>
 
 </html>
-<script src="form.js"></script>
+<script src="js/form.js"></script>
+<script src="js/header.js"></script>

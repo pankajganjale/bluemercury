@@ -8,7 +8,7 @@
 3. Atul Kumar
 4. Vishwaraj Patil
 
-# Features: -
+# Features:-
 1. You will find latest products on this website.
 2. It has feature of authentication, signup, reset password and mail subscription.
 3. It has different categories. User can find products using filters such as price, brand name, new arrivals.
@@ -18,7 +18,7 @@
 7. User can select quantity for each product in a cart.
 8. User can apply promo code for discount.
 
-# Technologies that we used : -
+# Technologies that we used :-
 1.HTML
 2.CSS
 3.Javascript
@@ -35,7 +35,7 @@ Clone the repo
 
 Pankaj Ganjale - [My Linkedin](https://linkedin.com/in/pankajganjale)
 
-Project Link: [Project Repo](https://github.com/pankajganjale/bluemercury.git)
+Project Link - [Project Repo](https://github.com/pankajganjale/bluemercury.git)
 
 ## Acknowledgment
 Took some help from these resources 

@@ -26,7 +26,7 @@
       
 
 
-      <form class="PaymenForm">
+      <form class="PaymenForm" onsubmit="nextPage(event)">
 
         <h2 style="margin-left: 10px;">Contact information</h2>
         <div class="Form_Box" id="remove-btm">
@@ -62,25 +62,25 @@
             <label class="Form_Invisible" for="Address_line1">Address_line1</label>
           </div>
           <div>
-            <input id="Payment_address" class="Payment_Form_Ip" type="text" name="Address_line2"
+            <input id="Payment_address1" class="Payment_Form_Ip" type="text" name="Address_line2"
               placeholder="Apartment, suite, etc. (optional)">
             <label class="Form_Invisible" for="Address_line2">Address_line2</label>
           </div>
           <div>
-            <input id="Payment_address" class="Payment_Form_Ip" type="text" name="City" placeholder="City">
+            <input id="city" class="Payment_Form_Ip" type="text" name="City" placeholder="City">
             <label class="Form_Invisible" for="City">City</label>
           </div>
 
           <div style="display: flex;">
             <div>
               <!-- <label class="location" for="Country">Country/region</label> -->
-              <select id="" class="location_list" name="Country">
-                <option value="India">United States</option>
+              <select id="cont" class="location_list" name="Country">
+                <option value="us">United States</option>
               </select>
             </div>
             <div>
               <!-- <label class="location" for="State">State</label> -->
-              <select id="" class="location_list" name="State">
+              <select id="stt" class="location_list" name="State">
                 <option value="alaska">Alaska</option>
                 <option value="california">California</option>
                 <option value="delaware">Delaware</option>
@@ -112,7 +112,7 @@
           <div>
             <a href="" style="color: #12284c; font-size: 12px;">
               < RETURN TO CART</a>
-                <button class="End_btn" style="width: 300px; margin-left: 150px; font-weight: 600;">CONTINUE TO SHIPPING
+                <button class="End_btn" style="width: 300px; margin-left: 150px; font-weight: 600;" >CONTINUE TO SHIPPING
                   METHOD</button>
           </div>
         </div>

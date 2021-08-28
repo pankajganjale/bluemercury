@@ -193,3 +193,21 @@ function applyPromo() {
         alert("Invalid Promo Code!");
     }
 }
+
+// Payment PAge Form
+
+function nextPage(event) {
+    event.preventDefault();
+    let email = document.getElementById("Email").value;
+    let fname = document.getElementById("Payment_username").value;
+    let lname = document.getElementById("Payment_lastname").value;
+    let add1 = document.getElementById("Payment_address").value;
+
+    if (email.length < 5 || fname.length < 1 || lname.length < 1 || add1.length < 5) {
+        alert("Enter Valid Details!");
+    } else {
+        window.location.href = "payment_2.html";
+    }
+
+    
+}

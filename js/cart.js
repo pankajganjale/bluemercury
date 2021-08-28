@@ -32,11 +32,6 @@ function addingData() {
 
 addingData()
 
-// let total = 0;
-
-// function totalPay() {
-    
-// }
 
 function plus(val) {
     let id = val.id;

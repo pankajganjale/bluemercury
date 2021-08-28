@@ -1,3 +1,4 @@
+/* Shop */
 #shop {
     text-decoration: none;
 }
@@ -35,7 +36,7 @@ button {
 
 #shop_hover a {
     text-decoration: none;
-    color: #B0BEC5;
+    color: rgba(18, 40, 76, 0.6);
     font-weight: 300;
     
 }
@@ -43,7 +44,7 @@ button {
 #shop_hover a:hover {
     color: #12284c;
     font-weight: 400;
-    line-height: 23px;
+    line-height: 14px;
     size: 14px;
   }
 
@@ -52,9 +53,3 @@ button {
     height: 410px;
     border: .1px solid #E0E0E0;
 }
-
-/* .rk {
-    position: block;
-    width: 200px;
-    margin-top: 50px;
-} */

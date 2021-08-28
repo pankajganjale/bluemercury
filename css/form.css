@@ -170,6 +170,8 @@ button {
 /* .news-checkbox {
     
 } */
+
+
 .Form_Ip_Name {
     width: 250px;
     height: 24px;
@@ -219,3 +221,87 @@ button {
     background-color: #FFC439;
     border-radius: 4px;
 }
+#remove-btm {
+    margin-bottom: 0;
+}
+
+/* Payment Page Right Part Starts */
+
+#p-right-section {
+    background-color: #f0f0f0;
+}
+
+/* #main-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+.p-grid {
+    /* display: grid; */
+    /* grid-template-rows: 1fr 1fr; */
+    width: 80%;
+    margin: 10px auto;
+}
+.p-grid > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
+}
+.p-grid > div:nth-child(1) img {
+    height: 100px;
+}
+.p-grid > div:nth-child(1) div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-left: 10px; */
+}
+.p-grid > div:nth-child(1) div:nth-child(2) p {
+    margin: 0;
+    padding: 0;
+}
+.p-grid > div:nth-child(1) div:nth-child(2) p:nth-child(1) {
+    font-size: 14px;
+    margin: 10px 0 10px 0;
+    font-weight: 400;
+}
+.p-grid > div:nth-child(1) div:nth-child(2) p:nth-child(2) {
+    color: rgba(18, 40, 76, 0.7);
+    font-size: 13px;
+}
+.p-grid div:nth-child(3) {
+    padding-top: 20px;
+}
+
+#discount {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #12284c;
+    width: 80%;
+    /* grid-gap: 10px; */
+    margin: auto;
+    height: 40px;
+}
+#discount div input {
+    width: 100%;
+    height: 85%;
+}
+#discount div button {
+    width: 100%;
+    height: 100%;
+    background-color: #12284c;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+.tot {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.tot div:nth-child(2) {
+    flex-grow: 1;
+    text-align: right;
+}
+
+

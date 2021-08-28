@@ -1,236 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .one{
-            display : flex;
-            /* background-color:cadetblue; */
-            width : 85%;
-            height :500px;
-            margin: auto;
-        }
-        .one_1{
-            flex-basis: 67%;
-            /* background-color: crimson; */
-        }
-        .one_2{
-            flex-basis: 33%;
-            /* background-color: darkgoldenrod; */
-        }
-        .one_1_1{
-            display: flex;
-            flex-direction: column;
-            /* scrollbar-width:thin; */
-            overflow-y: scroll;
-            width : 20%;
-            overflow-x: hidden;
-            
-        }
-        ::-webkit-scrollbar{
-            width: 2px;
-            background-color:lightgray
-        }
-        .one_1{
-            display: flex;
-        }
-        .one_2 > div:nth-child(1){
-            font-family: "Montserrat Semi Bold", sans-serif;
-            font-style: normal;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color:#12284c
-            
-
-        }
-        .one_2 > div:nth-child(2){
-            font-family:"Montserrat Regular", sans-serif;
-            font-style: normal;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 26px;
-            color:#12284c;
-        }
-        .one_2 > div:nth-child(4){
-            font-family:"Montserrat Light", sans-serif;
-            font-style: normal;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 23px;
-            color:#12284c;
-        }
-        .quantity {
-  padding-top: 20px;
-  margin-right: 60px;
-}
-.quantity input {
-  /* -webkit-appearance: none; */
-  border: solid 1px gray;
-  text-align: center;
-  width: 30px;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-  height: 24px;
-  margin-left: 0px;
-}
- 
-button[class*=btn] {
-  width: 30px;
-  height: 30px;
-  background-color:lightgray;
-  /* border-radius: 6px; */
-  border:solid 1px gray;
-  cursor: pointer;
-}
-.minus-btn{
-    margin-right: 0px;
-}
-.plus-btn{
-    margin-left:0px;
-}
-.minus-btn img {
-  margin-bottom: 1px;
-  height:10px;
-  width:10px;
-  
-}
-.plus-btn img {
-  margin-top: 2px;
-  height:10px;
-  width:10px;
-}
- 
-button:focus,
-input:focus {
-  outline:0;
-}
-#ff{
-    display: flex;
-} 
-#ff > div:nth-child(2) >a{
-    text-decoration: none;
-    /* padding:10px 20px; */
-    /* background-color: #12284C; */
-    color: white;
-    
-
-}
-#ff > div:nth-child(1){
-    flex-basis: 30%;
-    /* background-color: violet; */
-    margin-right: 0px;
-}
-#ff > div:nth-child(2){
-    flex-basis: 40%;
-    background-color:#12284C;
-    margin-top: 10px;
-    padding-left:45px ;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 45px;
-    margin-left: 15px;
-}
-.hh{
-    border:1px solid black;
-    /* background-color:yellowgreen; */
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-family:"Montserrat Light", sans-serif;
-            font-style: normal;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 23px;
-            color:#12284c;
-}
-.bold{
-    font-weight: bold;
-}
-.o img{
-    height:20px;
-    width:20px;
-}
-.o{
-    margin-top: 10px;
-}
-    </style>
-
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/product_details.css">
 </head>
-<body>
+
+<body onload="slideShow()">
+
+    <!-- Header Starts Here -->
+    <header>
+        <div>
+            <div id="heading_first_row">
+                <div class="heading_one">
+                    <div>
+                        <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href=""
+                            target="_blank"></a>
+                    </div>
+                    <div>STORE & SPA LOCATOR</div>
+                </div>
+                <div class="heading_one">
+                    <div>
+                        <img
+                            src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
+                    </div>
+                    <div>WISHLIST</div>
+                </div>
+                <div class="heading_one">
+                    <div>
+                        <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
+                    </div>
+                    <div>SEARCH</div>
+                </div>
+                <div id="click-log" class="heading_one">
+                    <div>
+                        <img src="https://static.thenounproject.com/png/3144376-200.png" />
+                    </div>
+                    <div>SIGN IN/UP</div>
+                </div>
+                <div class="heading_one">
+                    <div>
+                        <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
+                    </div>
+                    <div>BAG</div>
+                </div>
+            </div>
+            <div class="heading_two"><img id="img-click"
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
+            </div>
+            <div id="heading_second_row">
+                <div></div>
+                <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
+                <div><a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a></div>
+                <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
+                <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
+                <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
+                <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Ends Here -->
+
+    <div id="bluewards"></div>
+
     <div class="one">
         <div class="one_1">
             <div class="one_1_1">
-                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_100x.jpg?v=1629489864"></a>
-                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-2_100x.jpg?v=1629489864"></a>
-                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-3_100x.jpg?v=1629489865"></a>
-                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-4_100x.jpg?v=1629489865"></a>
-                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-5_100x.jpg?v=1629489865"></a>
-                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-6_100x.jpg?v=1629489865"></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_100x.jpg?v=1629489864"></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-2_100x.jpg?v=1629489864"></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-3_100x.jpg?v=1629489865"></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-4_100x.jpg?v=1629489865"></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-5_100x.jpg?v=1629489865"></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-6_100x.jpg?v=1629489865"></a>
             </div>
             <div></div>
             <div>
-                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_525x525.jpg?v=1629489864">
+                <img style="height: 100%;"
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_525x525.jpg?v=1629489864">
             </div>
             <div></div>
         </div>
         <div class="one_2">
             <div>KIEHL'S SINCE 1851</div>
-             <div>Micro-Dose Anti-Aging Retinol Serum with Ceramides and Peptide</div> 
+            <div>Micro-Dose Anti-Aging Retinol Serum with Ceramides and Peptide</div>
             <div>
-                <div>$60</div>
-                <div></div>
-                <div>(0)</div>
+                <div>$60 ☆☆☆☆☆ (0)</div>
             </div>
-            <div>A potent retinol serum in a daily-strength micro-dose that visibly reduces wrinkles, firms skin, evens skin tone, and smoothes texture with minimal discomfort. <a href="#"> See More</a></div>
-            <br> <br>
+            <div>A potent retinol serum in a daily-strength micro-dose that visibly reduces wrinkles, firms skin, evens
+                skin tone, and smoothes texture with minimal discomfort. <a href="#" style="color: #12284c;"> See
+                    More</a></div>
             <hr>
             <div id="ff">
-            <div class="quantity">
-                <button class="minus-btn" type="button" name="button" onclick="remove()">
-                    <img src="https://image.flaticon.com/icons/png/128/339/339879.png" alt="" />
-                  </button>
-                <input type="text" name="name" value="1">
-                <button class="plus-btn" type="button" name="button" onclick="add()">
-                    <img src="https://image.flaticon.com/icons/png/128/864/864380.png" alt="" />
-                  </button>
-              </div>
-              <div><a href="#">ADD TO BAG &nbsp|&nbsp $60</a></div>
-            </div>
-            <div class="hh">4 interest-free payments of $15.00 with <span class="bold">Klarna</span>.<a href="#"> Learn more</a></div>
-            <div class="heading_one">
-                <div>
-                    <img
-                        src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button" onclick="remove()">
+                        <img src="https://image.flaticon.com/icons/png/128/339/339879.png" alt="" />
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="plus-btn" type="button" name="button" onclick="add()">
+                        <img src="https://image.flaticon.com/icons/png/128/864/864380.png" alt="" />
+                    </button>
                 </div>
-                <div>Add to Wishlist</div>
+                <div></div>
+                <div id="bag"><a href="#">ADD TO BAG &nbsp|&nbsp $60</a></div>
+            </div>
+            <div class="hh">4 interest-free payments of $15.00 with <span class="bold">Klarna</span>.<a href="#"> Learn
+                    more</a></div>
+        </div>
+    </div>
+
+    <hr style="width: 70%; margin: auto;">
+
+    <div id="below-product">
+        <div>
+            <ul class="remove-dot">
+                <li>Product Details</li>
+                <ul>
+                    Kiehl's potent retinol serum is formulated with Pure Retinol in a daily-strength micro-dose, along
+                    with Ceramides and Peptide, to promote gentle skin surface turnover for youthful-looking skin.
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <hr style="width: 70%; margin: auto;">
+    <!-- New Arrival Slide Show Start -->
+    <div id="slide-new-arrival">
+        <div id="slide-above">
+            <p>BEAUTY LOVERS WHO VIEWED ITEMS YOU BROWSED ALSO VIEWED</p>
+        </div>
+        <div class="slide-parent">
+            <div id="slide-leftarrow" onclick="slideMoveLeft()">
+                <button>&lt;</button>
+            </div>
+            <div class="slide-child" id="sc1">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bliss-656509018215-1.jpg?v=1628929779"
+                    alt="">
+                <p>CHANTECAILLE</p>
+                <p>Skin Moisturizer</p>
+                <p>$79</p>
+            </div>
+            <div class="slide-child" id="sc2">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-194251026169-1_235x235_crop_center.jpg?v=1628195108"
+                    alt="">
+                <p>NARS</p>
+                <p>Climax Eyeshadow Palette</p>
+                <p>$49</p>
+            </div>
+            <div class="slide-child" id="sc3">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060506361505-1_235x235_crop_center.jpg?v=1629380313"
+                    alt="">
+                <p>THE NUE CO</p>
+                <p>Destress 360</p>
+                <p>$55</p>
+            </div>
+            <div class="slide-child" id="sc4">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-860006685539-1_235x235_crop_center.jpg?v=1629234653"
+                    alt="">
+                <p>JENNY PATINKIN</p>
+                <p>Cryo Glow Globes</p>
+                <p>$70</p>
+            </div>
+            <div class="slide-child" id="sc5">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-air-850004373019-1_235x235_crop_center.jpg?v=1628195030"
+                    alt="">
+                <p>HOURGLASS</p>
+                <p>Curator Eyeshadow</p>
+                <p>$29</p>
+            </div>
+            <div class="slide-child" id="sc6">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-85oz-685428028913-1_235x235_crop_center.jpg?v=1627423091"
+                    alt="">
+                <p>BUMBLE AND BUMBLE</p>
+                <p>Blonde Shampoo</p>
+                <p>$31</p>
+            </div>
+            <div class="slide-child" id="sc7">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-67oz-685428028944-1_235x235_crop_center.jpg?v=1627422903"
+                    alt="">
+                <p>BUMBLE AND BUMBLE</p>
+                <p>Blonde Conditioner</p>
+                <p>$34</p>
+            </div>
+            <div class="slide-child" id="sc8">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-color-bodyheat-888066094887-1_235x235_crop_center.jpg?v=1629134891"
+                    alt="">
+                <p>TOM FORD</p>
+                <p>Eye Color Quad</p>
+                <p>$89</p>
+            </div>
+            <div id="slide-rightarrow" onclick="slideMoveRight()">
+                <button>&gt;</button>
             </div>
         </div>
     </div>
+    <!-- New Arrival Slide Show End -->
+
+    <hr style="margin-top: 50px;">
+
+    <!-- Footer Start -->
+    <div id="foot">
+        <div id="foot-first">
+            <p>Get Expert Beauty Insight & Offers</p>
+            <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
+            <button onclick="mailSent()">&rarr;</button>
+            <div>To learn more about how we use your information and your rights, see Privacy Note</div>
+            <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
+        </div>
+        <div>
+            <p>BLUEMERCURY</p>
+            <p>Our Company</p>
+            <p>Store Locator</p>
+            <p>Spa Menu</p>
+            <p>Press</p>
+            <p>Careers</p>
+        </div>
+        <div>
+            <p>MY ACCOUNT</p>
+            <p>My Account</p>
+            <p>Blue Rewards</p>
+        </div>
+        <div>
+            <p>CUSTOMER SERVICE</p>
+            <p>Contact Us</p>
+            <p>Help & FAQ</p>
+            <p>Offers</p>
+            <p>Klarna</p>
+        </div>
+        <div>
+            <p>RESOURCES</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Accessibility</p>
+            <p>COVID-19 Updates</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
 </body>
-<script>
-    function add(){
-        var d=document.querySelector("input");
-        var c=d.value;
-        d.innerHTML=null;
-        input=Number(c);
-        input++;
-        d.value=input;
-    }
-    function remove(){
-        var d=document.querySelector("input");
-        var c=d.value;
-        d.innerHTML=null;
-        input=Number(c);
-        if(input === 1){
-            input = c;
-        }else{
-        input--;
-        }
-        d.value=input;
-    }
-</script>
 </html>
+<script src="js/header.js"></script>
+<script src="js/product_details.js"></script>

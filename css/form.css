@@ -164,8 +164,12 @@ button {
     text-align: left;
 }
 /* Payment css section */
-#Main {
+.Main_payment {
     color: #12284c;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 /* .news-checkbox {
     
@@ -218,4 +222,33 @@ button {
     margin: 15px;
     background-color: #FFC439;
     border-radius: 4px;
+}
+.contact_info {
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin: 20px;
+    width: 90%;
+}
+.contact_info_sub {
+    display: grid;
+    grid-template-columns: 14% 69% 15%;
+}
+.Pay_method {
+    margin: 40px 20px;
+    width: 90%;
+}
+.Pay_option {
+    border: 1px solid gainsboro;
+}
+.Pay_option_title {
+    display: grid;
+    grid-template-columns: 9% 56% 35%;
+}
+.Pay_Ip_main {
+    text-align: center;
+}
+.Pay_Ip {
+    height: 45px;
+    width: 85%;
+    margin: 15px 15px 0px;
 }

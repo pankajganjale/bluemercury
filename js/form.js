@@ -180,7 +180,7 @@ function applyPromo() {
             a += totalAm[i];
         }
         a = Number(a);
-        a = (a/100)*70;
+        a = Math.floor((a/100)*70);
         document.getElementById("tot").textContent = `$${a}`;
 
         let getingAm = localStorage.getItem("bluemercuryFinalAmount");
@@ -207,7 +207,16 @@ function nextPage(event) {
         alert("Enter Valid Details!");
     } else {
         window.location.href = "payment_2.html";
-    }
+    }   
+}
 
-    
+// JS for Last PAyment Page
+
+function payMoney(event) {
+    event.preventDefault();
+
+    setTimeout(function () {
+        alert("Paymet Successful!");
+        window.location.href = "index.html";
+    }, 3000);
 }

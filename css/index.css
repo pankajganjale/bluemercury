@@ -2,6 +2,158 @@ body {
     font-family: "Montserrat Light", sans-serif;
 }
 
+/* right slide start */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+  
+.sidenav a:hover {
+    color: black;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+#top1 {
+    color: #12284c;
+}
+
+#middle {
+    height: 55%;
+    margin: 20px;
+}
+
+#buttom {
+    padding: 20px;
+}
+.view_bag {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    background: #12284c;
+    height: 30px;
+}
+#buttom a {
+    text-decoration: none;
+}
+#buttom p {
+    line-height: 20px;
+    size: 12px;
+    font-weight: 100;
+    color: #12284c;
+}
+
+#flex_box {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+
+#fb0 {
+    width: 110PX;
+    margin: 5px;
+    object-fit: none;
+}
+#fb0 img {
+    width: 100px;
+    height: 125px;
+}
+
+#fb1 {
+    width: 180px;
+    line-height: 20px;
+    font-weight: 400;
+    size: 14px;
+}
+#fb1 a {
+    text-decoration: none;
+}
+
+#fb2 {
+    padding: 50px 0 0 20px;
+}
+
+/* right slide end */
+
+/* text slider start */
+
+#slider{
+    overflow: hidden;
+    position: relative;
+    top: 40px;
+}
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure div {
+    height: 36px;
+    float: left;
+    width: 20%;
+    text-align: center;
+    text-size-adjust: 100%;
+    color: rgb(18, 40, 76);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 36px;
+    background-color: rgb(215, 235, 242);
+}
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/* text slider end */
+
 /* For Sliders */
 #slide-new-arrival {
     width: 90%;

@@ -1,3 +1,15 @@
+// right slide start
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "450px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  
+// right slide end
+
 // Products Data Starts Here
 let bluemercuryData = [
     {

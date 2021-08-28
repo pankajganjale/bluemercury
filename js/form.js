@@ -115,3 +115,81 @@ function recoverPassword(event) {
         }, 2000);
     }
 }
+
+// Payment Right Section
+
+
+
+function payRight() {
+    let rightAdd = localStorage.getItem("bluemercuryCart");
+    let rightConvert = JSON.parse(rightAdd);
+    // console.log(rightConvert)
+
+    rightConvert.forEach(function (prod) {
+        let where = document.getElementById("p-right-section");
+
+        let data = `<div class="p-grid">
+        <div>
+          <img src="${prod.image}" alt="">
+          <div>
+            <p>${prod.brand}</p>
+            <p>${prod.name}</p>
+          </div>
+          <div class="get-price">$${prod.price}</div>
+        </div>
+      </div>
+      <hr style="width: 80%; margin: auto;">`;
+
+      where.innerHTML += data;
+    })
+}
+payRight();
+
+function promoBefore() {
+    let rightAdd = localStorage.getItem("bluemercuryFinalAmount");
+    let rightConvert = JSON.parse(rightAdd);
+
+    let insert = `<div id="discount">
+    <div>
+      <input type="text" name="box" id="text" placeholder="Gift Card/Promo Code">
+    </div>
+    <div><button onclick="applyPromo()">APPLY</button></div>
+  </div>
+  <hr style="margin: 20px auto; width: 80%;">
+  <div class="tot">
+    <div>Subtotal</div>
+    <div>${rightConvert[0].amount}</div>
+  </div>
+  <hr style="margin: 20px auto; width: 80%;">
+  <div class="tot">
+    <div>Total</div>
+    <div id="tot">${rightConvert[0].amount}</div>
+  </div>`
+
+  let where = document.getElementById("p-right-section");
+  where.innerHTML += insert;
+}
+promoBefore()
+
+function applyPromo() {
+    let input = document.getElementById("text").value;
+    let totalAm = document.getElementById("tot").textContent;
+    if (input === "blue30") {
+        let a = '';
+        for (let i = 1; i < totalAm.length; i++) {
+            a += totalAm[i];
+        }
+        a = Number(a);
+        a = (a/100)*70;
+        document.getElementById("tot").textContent = `$${a}`;
+
+        let getingAm = localStorage.getItem("bluemercuryFinalAmount");
+        let convertAm = JSON.parse(getingAm);
+        
+        convertAm[0].amount = `$${a}`;
+     
+        localStorage.setItem("bluemercuryFinalAmount", JSON.stringify(convertAm));
+    } else {
+        alert("Invalid Promo Code!");
+    }
+}

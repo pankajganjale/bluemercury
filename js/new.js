@@ -121,12 +121,15 @@ for (i = 0; i < dropdown.length; i++) {
 // Adding Products in HTML
 let accessing = localStorage.getItem("bluemercuryProducts");
 let productData = JSON.parse(accessing);
+let z = 0;
 
 function addData() {
     let mainDiv = document.getElementById("right-body");
 
     productData.forEach(function (product) {
         let div = document.createElement("div");
+        div.setAttribute("id", `a${z}`);
+        z++;
 
         let image = document.createElement("img");
         image.src = product.image;
@@ -142,7 +145,11 @@ function addData() {
         p3.innerText = price;
 
         div.append(image, p1, p2, p3);
+        div.onclick = function () {
+            addClickData(product)
+        };
         mainDiv.append(div);
+        
     })
 }
 addData();
@@ -318,3 +325,38 @@ function mailSent() {
         }, 3000);
     }
 };
+
+// 
+
+if (localStorage.getItem("bluemercuryCart") === null) {
+    localStorage.setItem("bluemercuryCart", JSON.stringify([]));
+};
+
+function addClickData(p) {
+    let ask = confirm("Add to Cart?")
+    if (ask) {
+        let access = localStorage.getItem("bluemercuryCart");
+        let cartData = JSON.parse(access);
+
+        let totalCount = 0;
+        for (let i = 0; i < cartData.length; i++) {
+            if (Object.values(cartData[i])[2] === p.name) {
+                alert("Product is Already in the Cart!");
+            } else {
+                totalCount++;
+            }
+        }
+
+        if (totalCount === cartData.length) {
+            cartData.push(p);
+            alert("Product is Added to the Cart!")
+            localStorage.setItem("bluemercuryCart", JSON.stringify(cartData));
+        }
+
+        if (p.name === "Anti-Aging Rentinol Serum") {
+            window.location.href = "product_details.html"
+        }
+        
+    }
+}
+

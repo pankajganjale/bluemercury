@@ -19,9 +19,9 @@
 8. User can apply promo code for discount.
 
 # Technologies that we used :-
-1.HTML
-2.CSS
-3.Javascript
+1. HTML
+2. CSS
+3. Javascript
 
 
 ### Clone

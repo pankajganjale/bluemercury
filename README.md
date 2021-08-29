@@ -3,8 +3,8 @@
 ### Bluemercury is a chain of American beauty stores founded in 1999 by Marla Malcolm Beck and Barry Beck. This project was build as a construct week project by Masai School Students.
 
 # Team Members:-
-1. Pankaj Ganjale
-2. Rahul Kumar
+1. Pankaj Ganjale [Linkedin](https://linkedin.com/in/pankajganjale)
+2. Rahul Kumar 
 3. Atul Kumar
 4. Vishwaraj Patil
 

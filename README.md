@@ -41,3 +41,35 @@ Project Link - [Project Repo](https://github.com/pankajganjale/bluemercury.git)
 Took some help from these resources 
 1) [W3 Schools](https://www.w3schools.com)
 2) [MDN docs](https://developer.mozilla.org/en-US/)
+
+
+
+
+# Glimpse of Our Work:-
+
+## Login Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/login.PNG?raw=true)
+
+
+## Home Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/home1.PNG?raw=true)
+
+
+## Category Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/Category.PNG?raw=true)
+
+
+## Product Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/product.PNG?raw=true)
+
+
+## Cart Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/cart.PNG?raw=true)
+
+
+## Shipping Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/shipping.PNG?raw=true)
+
+
+## Payment Page:-
+![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/payment.PNG?raw=true)

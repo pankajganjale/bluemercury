@@ -73,3 +73,6 @@ Took some help from these resources
 
 ## Payment Page:-
 ![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/payment.PNG?raw=true)
+
+## Output of Project:- [Bluemercury Clone](https://drive.google.com/file/d/1MpkHS77w3Kb4EOGvIW_RbpEDHSq9_WC_/view?usp=sharing)
+

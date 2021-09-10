@@ -22,14 +22,6 @@
 1. HTML
 2. CSS
 3. Javascript
-
-
-### Clone
-
-Clone the repo
-```sh
-   git clone https://github.com/pankajganjale/bluemercury.git
-   ```
    
 ## Contact
 
@@ -74,5 +66,12 @@ Took some help from these resources
 ## Payment Page:-
 ![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/payment.PNG?raw=true)
 
-## Output of Project:- [Bluemercury Clone](https://drive.google.com/file/d/1MpkHS77w3Kb4EOGvIW_RbpEDHSq9_WC_/view?usp=sharing)
+## To start our Project on your Machine:-
+1. Create a new folder.
+2. Run following command in terminal:- ```git clone https://github.com/pankajganjale/bluemercury.git```
+3. Open index.html file with Live Server.
+
+## Output of Project:- 
+1. [Video Presentation](https://drive.google.com/file/d/1MpkHS77w3Kb4EOGvIW_RbpEDHSq9_WC_/view?usp=sharing)
+2. [GitHub Deployment](https://pankajganjale.github.io/bluemercury/)
 

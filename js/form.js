@@ -215,8 +215,20 @@ function nextPage(event) {
 function payMoney(event) {
     event.preventDefault();
 
-    setTimeout(function () {
-        alert("Paymet Successful!");
-        window.location.href = "index.html";
-    }, 3000);
+    let cardNo = document.getElementById("cardno").value;
+    let cardName = document.getElementById("cardname").value;
+    let exp = document.getElementById("expiry").value;
+    let secretCode = document.getElementById("code").value;
+
+    if (cardNo.length < 16 || cardName.length === 0 || exp.length < 4 || code.length < 4) {
+        alert("Invalid Details")
+    } else {
+
+        localStorage.removeItem("bluemercuryCart")
+
+        setTimeout(function () {
+            alert("Paymet Successful!");
+            window.location.href = "index.html";
+        }, 2000);
+    }
 }

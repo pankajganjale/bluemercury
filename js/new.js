@@ -349,7 +349,6 @@ function addClickData(p) {
 
         if (totalCount === cartData.length) {
             cartData.push(p);
-            alert("Product is Added to the Cart!")
             localStorage.setItem("bluemercuryCart", JSON.stringify(cartData));
         }
 

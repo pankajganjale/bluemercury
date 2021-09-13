@@ -218,17 +218,16 @@ function payMoney(event) {
     let cardNo = document.getElementById("cardno").value;
     let cardName = document.getElementById("cardname").value;
     let exp = document.getElementById("expiry").value;
-    let secretCode = document.getElementById("code").value;
+    let code = document.getElementById("code").value;
 
-    if (cardNo.length < 16 || cardName.length === 0 || exp.length < 4 || code.length < 4) {
-        alert("Invalid Details")
-    } else {
-
+    if (cardNo.length === 16 && cardName.length > 5 && exp.length > 3 && code.length >= 4) {
         localStorage.removeItem("bluemercuryCart")
 
         setTimeout(function () {
             alert("Paymet Successful!");
             window.location.href = "index.html";
         }, 2000);
+    } else {
+        alert("Invalid Details!")
     }
 }

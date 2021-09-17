@@ -8,6 +8,11 @@
 3. Atul Kumar
 4. Vishwaraj Patil
 
+## To start our Project on your Machine:-
+1. Create a new folder.
+2. Run following command in terminal:- ```git clone https://github.com/pankajganjale/bluemercury.git```
+3. Open index.html file with Live Server.
+
 # Features:-
 1. You will find latest products on this website.
 2. It has feature of authentication, signup, reset password and mail subscription.
@@ -66,10 +71,6 @@ Took some help from these resources
 ## Payment Page:-
 ![login Page](https://github.com/pankajganjale/bluemercury/blob/master/image/payment.PNG?raw=true)
 
-## To start our Project on your Machine:-
-1. Create a new folder.
-2. Run following command in terminal:- ```git clone https://github.com/pankajganjale/bluemercury.git```
-3. Open index.html file with Live Server.
 
 ## Output of Project:- 
 1. [Video Presentation](https://drive.google.com/file/d/1MpkHS77w3Kb4EOGvIW_RbpEDHSq9_WC_/view?usp=sharing)

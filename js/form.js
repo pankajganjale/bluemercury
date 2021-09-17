@@ -198,12 +198,12 @@ function applyPromo() {
 
 function nextPage(event) {
     event.preventDefault();
-    let email = document.getElementById("Email").value;
-    let fname = document.getElementById("Payment_username").value;
-    let lname = document.getElementById("Payment_lastname").value;
-    let add1 = document.getElementById("Payment_address").value;
+    let email = document.getElementById("Email").value.trim();
+    let fname = document.getElementById("Payment_username").value.trim();
+    let lname = document.getElementById("Payment_lastname").value.trim();
+    let add1 = document.getElementById("Payment_address").value.trim();
 
-    if (email.length < 5 || fname.length < 1 || lname.length < 1 || add1.length < 5) {
+    if (email.length < 1 || fname.length < 1 || lname.length < 1 || add1.length < 1) {
         alert("Enter Valid Details!");
     } else {
         window.location.href = "payment_2.html";
@@ -216,11 +216,11 @@ function payMoney(event) {
     event.preventDefault();
 
     let cardNo = document.getElementById("cardno").value;
-    let cardName = document.getElementById("cardname").value;
+    let cardName = document.getElementById("cardname").value.trim();
     let exp = document.getElementById("expiry").value;
     let code = document.getElementById("code").value;
 
-    if (cardNo.length === 16 && cardName.length > 5 && exp.length > 3 && code.length >= 4) {
+    if (cardNo.length === 16 && cardName.length > 0 && exp.length > 3 && code.length >= 4) {
         localStorage.removeItem("bluemercuryCart")
 
         setTimeout(function () {
